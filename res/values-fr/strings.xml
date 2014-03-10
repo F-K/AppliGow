@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Login</string>
+    <string name="password">Mot de passe</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="loading">Chargement...</string>
+    
+    <string name="error_server">Server error...</string>
+    <string name="error_sync">Synchronized error...</string>
+    <string name="error_missing_fields">Tous les champs sont obligatoires</string>
+    <string name="error_login_unavailable">Login indisponible</string>
+    <string name="error_sign_in">Login ou mot de passe incorrect</string>
+</resources>
