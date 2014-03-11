@@ -225,20 +225,42 @@ containing a value of this type.
         public static final int sakidopuprod=0x7f020020;
     }
     public static final class id {
-        public static final int action_settings=0x7f05000e;
+        public static final int buttonDelete=0x7f05001f;
+        public static final int buttonEdit=0x7f050019;
         public static final int buttonSignIn=0x7f05000c;
         public static final int buttonSignUp=0x7f05000d;
+        public static final int editTextFirstName=0x7f050010;
+        public static final int editTextLastName=0x7f050013;
         public static final int editTextLogin=0x7f050009;
+        public static final int editTextMail=0x7f050016;
         public static final int editTextPassword=0x7f05000b;
         public static final int hybrid=0x7f050004;
         public static final int imageView1=0x7f050005;
         public static final int imageView2=0x7f050006;
         public static final int map=0x7f050007;
+        public static final int menu_account=0x7f050022;
+        public static final int menu_account_edit=0x7f050024;
+        public static final int menu_account_informations=0x7f050023;
+        public static final int menu_events=0x7f050021;
+        public static final int menu_map=0x7f050020;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
+        public static final int tableRowFirstName=0x7f05000e;
+        public static final int tableRowLastName=0x7f050011;
+        public static final int tableRowLogin=0x7f05001d;
+        public static final int tableRowMail=0x7f050014;
+        public static final int tableRowPassword=0x7f050017;
         public static final int terrain=0x7f050003;
+        public static final int textViewFirstName=0x7f05001a;
+        public static final int textViewLabelFirstName=0x7f05000f;
+        public static final int textViewLabelLastName=0x7f050012;
+        public static final int textViewLabelLogin=0x7f05001e;
+        public static final int textViewLabelMail=0x7f050015;
+        public static final int textViewLabelPassword=0x7f050018;
+        public static final int textViewLastName=0x7f05001b;
         public static final int textViewLogin=0x7f050008;
+        public static final int textViewMail=0x7f05001c;
         public static final int textViewPassword=0x7f05000a;
     }
     public static final class integer {
@@ -249,12 +271,18 @@ containing a value of this type.
         public static final int main_map_activity=0x7f030001;
         public static final int sign_in_activity=0x7f030002;
         public static final int sign_up_activity=0x7f030003;
+        public static final int user_edit_activity=0x7f030004;
+        public static final int user_informations_activity=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
     }
     public static final class string {
+        /**  AppliGow 
+         */
         public static final int action_settings=0x7f06001b;
+        /**  AppliGow 
+         */
         public static final int app_name=0x7f06001a;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -350,19 +378,46 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int error_login_unavailable=0x7f060027;
-        public static final int error_missing_fields=0x7f060026;
-        public static final int error_server=0x7f060024;
-        public static final int error_sign_in=0x7f060028;
-        public static final int error_sync=0x7f060025;
+        public static final int delete=0x7f060028;
+        public static final int edit=0x7f060027;
+        public static final int error_login_unavailable=0x7f06002c;
+        public static final int error_missing_fields=0x7f06002b;
+        public static final int error_missing_password=0x7f06002f;
+        public static final int error_password=0x7f060030;
+        /**  Error 
+ Error 
+         */
+        public static final int error_server=0x7f060029;
+        public static final int error_sign_in=0x7f06002d;
+        public static final int error_sync=0x7f06002a;
+        /**  User 
+ User 
+         */
+        public static final int first_name=0x7f060020;
         public static final int home_loading_time=0x7f06001c;
-        public static final int loading=0x7f060023;
-        public static final int login=0x7f06001f;
-        public static final int password=0x7f060020;
-        public static final int port=0x7f06001d;
-        public static final int server_ip=0x7f06001e;
-        public static final int sign_in=0x7f060021;
-        public static final int sign_up=0x7f060022;
+        public static final int last_name=0x7f060021;
+        public static final int loading=0x7f06001d;
+        public static final int login=0x7f060023;
+        public static final int mail=0x7f060022;
+        public static final int menu_account=0x7f060033;
+        public static final int menu_account_edit=0x7f060035;
+        public static final int menu_account_informations=0x7f060034;
+        public static final int menu_events=0x7f060032;
+        /**  Menu 
+ Menu 
+         */
+        public static final int menu_map=0x7f060031;
+        public static final int password=0x7f060024;
+        /**  Configuration 
+         */
+        public static final int port=0x7f06001e;
+        public static final int server_ip=0x7f06001f;
+        /**  Action 
+ Action 
+         */
+        public static final int sign_in=0x7f060025;
+        public static final int sign_up=0x7f060026;
+        public static final int undefined=0x7f06002e;
     }
     public static final class style {
         /** 

@@ -17,7 +17,7 @@ public class HomeLoadingActivity extends Activity {
 	        @Override
 	        public void run() {
 	            FrontController.redirect(HomeLoadingActivity.this, SignInActivity.class);
-	            finish();
+	            finish(); // no back
 	        }
 	    }, Integer.parseInt(getString(R.string.home_loading_time)));
 	}

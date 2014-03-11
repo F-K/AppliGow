@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:gravity="center_vertical" >
+	
+	    <TableLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+	        
+	        <TableRow
+	            android:id="@+id/tableRowFirstName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:id="@+id/textViewLabelFirstName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/first_name" />
+	            
+	            <EditText
+			        android:id="@+id/editTextFirstName"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="textPersonName" >
+			
+			        <requestFocus />
+			    </EditText>
+	
+			</TableRow>
+	        
+	        <TableRow
+	            android:id="@+id/tableRowLastName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:id="@+id/textViewLabelLastName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/last_name" />
+	            
+	            <EditText
+			        android:id="@+id/editTextLastName"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="textPersonName" />
+	
+	        </TableRow>
+	        
+	        <TableRow
+	            android:id="@+id/tableRowMail"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:id="@+id/textViewLabelMail"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/mail" />
+	            
+	            <EditText
+			        android:id="@+id/editTextMail"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="textEmailAddress" />
+	
+	        </TableRow>
+	        
+	        <TableRow
+	            android:id="@+id/tableRowPassword"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:id="@+id/textViewLabelPassword"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/password" />
+	            
+	            <EditText
+			        android:id="@+id/editTextPassword"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="textPassword" />
+	
+	        </TableRow>
+		</TableLayout>
+		
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal" >
+	
+	        <Button
+	            android:id="@+id/buttonEdit"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:height="30dp"
+	            android:layout_margin="30dp"
+	            android:text="@string/edit" />
+	
+	    </LinearLayout>
+	
+	</LinearLayout>
+</ScrollView>

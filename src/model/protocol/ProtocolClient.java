@@ -38,4 +38,9 @@ public class ProtocolClient implements IProtocolClient {
 		return (Boolean) transport.receive();
 	}
 
+	@Override
+	public void sendUser(User user) throws IOException {
+		transport.send(user);
+	}
+
 }

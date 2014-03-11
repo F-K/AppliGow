@@ -11,5 +11,6 @@ public interface IProtocolClient {
 	public void sendPassword(String password) throws IOException;
 	public boolean getUserExist() throws ClassNotFoundException, IOException;
 	public User getUser() throws ClassNotFoundException, IOException;
+	public void sendUser(User user) throws IOException;
 
 }

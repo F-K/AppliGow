@@ -7,7 +7,7 @@ import controller.library.FrontController;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class SignInToSignUpListener implements OnClickListener {
+public class TowardSignUpListener implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {

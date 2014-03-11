@@ -7,11 +7,14 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
+
+import controller.library.FrontController;
 
 public class MainMapActivity extends FragmentActivity  {
 	
@@ -93,6 +96,26 @@ public class MainMapActivity extends FragmentActivity  {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+			case R.id.menu_map :
+				FrontController.redirect(this, MainMapActivity.class);
+				return true;
+	//		case R.id.menu_events :
+	//			FrontController.redirect(this, EventManagerActivity.class);
+	//			return true;
+			case R.id.menu_account_informations :
+				FrontController.redirect(this, UserInformationsActivity.class);
+				return true ;
+			case R.id.menu_account_edit :
+				FrontController.redirect(this, UserEditActivity.class);
+				return true ;
+			default :
+				return super.onOptionsItemSelected(item);
+		}
 	}
 	
 }

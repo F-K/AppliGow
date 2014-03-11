@@ -45,9 +45,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.activity.appligow.SignInActivity"></activity>
-        <activity android:name="com.activity.appligow.SignUpActivity"></activity>
-        <activity android:name="com.activity.appligow.MainMapActivity"></activity>
+        <activity android:name="com.activity.appligow.SignInActivity" />
+        <activity android:name="com.activity.appligow.SignUpActivity" />
+        <activity android:name="com.activity.appligow.MainMapActivity" />
+        <activity android:name="com.activity.appligow.UserInformationsActivity" />
+        <activity android:name="com.activity.appligow.UserEditActivity" />
         
         <meta-data
 		    android:name="com.google.android.gms.version"
@@ -57,7 +59,7 @@
         <!-- 2014-02-09 | Clé pour l'utilisatoin de la map -->
         <meta-data
 		    android:name="com.google.android.maps.v2.API_KEY"
-		    android:value="AIzaSyAsxIMwz5XYlPSa-STttaxnKKqX0TX-tyo"/>
+		    android:value="AIzaSyA8YOB20uSdnpqqvwKBNSN6O65DQsb6FA4"/>
     </application>
     
 </manifest>
