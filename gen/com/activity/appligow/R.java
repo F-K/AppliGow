@@ -225,6 +225,7 @@ containing a value of this type.
         public static final int sakidopuprod=0x7f020020;
     }
     public static final class id {
+        public static final int action_settings=0x7f050020;
         public static final int buttonDelete=0x7f05001f;
         public static final int buttonEdit=0x7f050019;
         public static final int buttonSignIn=0x7f05000c;
@@ -238,11 +239,11 @@ containing a value of this type.
         public static final int imageView1=0x7f050005;
         public static final int imageView2=0x7f050006;
         public static final int map=0x7f050007;
-        public static final int menu_account=0x7f050022;
-        public static final int menu_account_edit=0x7f050024;
-        public static final int menu_account_informations=0x7f050023;
-        public static final int menu_events=0x7f050021;
-        public static final int menu_map=0x7f050020;
+        public static final int menu_account=0x7f050023;
+        public static final int menu_account_edit=0x7f050025;
+        public static final int menu_account_informations=0x7f050024;
+        public static final int menu_events=0x7f050022;
+        public static final int menu_map=0x7f050021;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
@@ -267,15 +268,18 @@ containing a value of this type.
         public static final int google_play_services_version=0x7f070000;
     }
     public static final class layout {
-        public static final int home_loading_activity=0x7f030000;
-        public static final int main_map_activity=0x7f030001;
-        public static final int sign_in_activity=0x7f030002;
-        public static final int sign_up_activity=0x7f030003;
-        public static final int user_edit_activity=0x7f030004;
-        public static final int user_informations_activity=0x7f030005;
+        public static final int activity_create_event=0x7f030000;
+        public static final int activity_event_informations=0x7f030001;
+        public static final int home_loading_activity=0x7f030002;
+        public static final int main_map_activity=0x7f030003;
+        public static final int sign_in_activity=0x7f030004;
+        public static final int sign_up_activity=0x7f030005;
+        public static final int user_edit_activity=0x7f030006;
+        public static final int user_informations_activity=0x7f030007;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
+        public static final int event_informations=0x7f0a0000;
+        public static final int main=0x7f0a0001;
     }
     public static final class string {
         /**  AppliGow 
@@ -378,6 +382,9 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
+        /**  Event 
+         */
+        public static final int create_event=0x7f060037;
         public static final int delete=0x7f060028;
         public static final int edit=0x7f060027;
         public static final int error_login_unavailable=0x7f06002c;
@@ -390,6 +397,7 @@ containing a value of this type.
         public static final int error_server=0x7f060029;
         public static final int error_sign_in=0x7f06002d;
         public static final int error_sync=0x7f06002a;
+        public static final int event_informations=0x7f060038;
         /**  User 
  User 
          */
@@ -417,6 +425,7 @@ containing a value of this type.
          */
         public static final int sign_in=0x7f060025;
         public static final int sign_up=0x7f060026;
+        public static final int title_activity_create_event=0x7f060036;
         public static final int undefined=0x7f06002e;
     }
     public static final class style {

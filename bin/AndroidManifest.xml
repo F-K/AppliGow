@@ -7,35 +7,48 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
-    
-    <!--  autoriser le package com.activity.appligow à utiliser les maps -->
+
+    <!-- autoriser le package com.activity.appligow à utiliser les maps -->
     <permission
         android:name="com.activity.appligow.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
-    
+
     <!-- 2014-02-10	Permissions permettant à l'application d'utiliser les réseaux internet, etc. -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    
+
     <!-- 2014-02-09 | Ajout de permissions pour l'utilisation de google maps API -->
     <uses-permission android:name="com.activity.appligow.permission.MAPS_RECEIVE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!--  géolocalisation par wifi -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!--  géolocalisation par gps -->
-    
-    <!--  2014-02-09 | utilisation de OpenGL ES pour effectuer le rendu des maps -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- géolocalisation par wifi -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- géolocalisation par gps -->
+
+
+    <!-- 2014-02-09 | utilisation de OpenGL ES pour effectuer le rendu des maps -->
     <uses-feature
         android:glEsVersion="0x00020000"
-        android:required="true"/>
-    
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label=""
-        android:theme="@style/AppTheme" android:logo="@drawable/logo_white">
+        android:logo="@drawable/logo_white"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- 2014-02-09 | Clé pour l'utilisatoin de la map -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDUIgfsEMze8RgZJ9qVlEM407kz1SejXvI" />
+
         <activity
             android:name="com.activity.appligow.HomeLoadingActivity"
             android:label="@string/app_name" >
@@ -50,16 +63,8 @@
         <activity android:name="com.activity.appligow.MainMapActivity" />
         <activity android:name="com.activity.appligow.UserInformationsActivity" />
         <activity android:name="com.activity.appligow.UserEditActivity" />
-        
-        <meta-data
-		    android:name="com.google.android.gms.version"
-		    android:value="@integer/google_play_services_version" />
-		        
-        
-        <!-- 2014-02-09 | Clé pour l'utilisatoin de la map -->
-        <meta-data
-		    android:name="com.google.android.maps.v2.API_KEY"
-		    android:value="AIzaSyA8YOB20uSdnpqqvwKBNSN6O65DQsb6FA4"/>
+        <activity android:name="com.activity.appligow.CreateEventActivity" />
+        <activity android:name="com.activity.appligow.EventInformationsActivity"/>
     </application>
-    
+
 </manifest>

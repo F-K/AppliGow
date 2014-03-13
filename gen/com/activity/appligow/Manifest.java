@@ -9,7 +9,7 @@ package com.activity.appligow;
 
 public final class Manifest {
     public static final class permission {
-        /**   autoriser le package com.activity.appligow à utiliser les maps 
+        /**  autoriser le package com.activity.appligow à utiliser les maps 
          */
         public static final String MAPS_RECEIVE="com.activity.appligow.permission.MAPS_RECEIVE";
     }
