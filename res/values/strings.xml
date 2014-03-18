@@ -9,7 +9,8 @@
 
     <!-- Configuration -->
     <string name="port">1234</string>
-    <string name="server_ip">192.168.43.219</string>
+    <string name="server_ip">192.168.1.56</string>
+    <string name="API_KEY">AIzaSyDUIgfsEMze8RgZJ9qVlEM407kz1SejXvI</string>
 
     <!-- User -->
     <string name="first_name">First name</string>
@@ -43,7 +44,26 @@
     <string name="title_activity_create_event">CreateEventActivity</string>
     
     <!-- Event -->
-    <string name="create_event">Create event activity</string>
+    <string name="create_event">CREATE EVENT</string>
+    <string name="create_event_title">Title : </string>
+    <string name="create_event_category">Category : </string>
+    <string name="create_event_description">Description : </string>
+    <string name="create_event_date_start">Start the : </string>
+    <string name="create_event_date_end">End the : </string>
+    <string name="create_event_date_start_button">Start date</string>
+    <string name="create_event_date_end_button">End date</string>
+    <string name="create_event_time_start_button">Start time</string>
+    <string name="create_event_time_end_button">End time</string>
+    <string name="create_event_address">Address : </string>
+    <string-array name="create_event_category_spinner">
+        <item>Party</item>
+        <item>Music</item>
+        <item>Movie</item>
+        <item>Sport</item>
+        <item>Video game</item>
+        <item>Others</item>
+    </string-array>
+    
     <string name="event_informations">Event informations activity</string>
 
 </resources>

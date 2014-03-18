@@ -3,7 +3,7 @@
     
     <!-- AppliGow -->
     <string name="action_settings">Paramètres</string>
-    <string name="loading">chargement...</string>
+    <string name="loading">Chargement&#8230;</string>
     
     <!-- User -->
     <string name="first_name">Prénom</string>
@@ -19,8 +19,8 @@
     <string name="delete">Supprimer</string>
     
     <!-- Error -->
-    <string name="error_server">Erreur serveur...</string>
-    <string name="error_sync">Erreur de synchronisation...</string>
+    <string name="error_server">Erreur serveur&#8230;</string>
+    <string name="error_sync">Erreur de synchronisation&#8230;</string>
     <string name="error_missing_fields">Tou les champs sont obligatoires</string>
     <string name="error_login_unavailable">Login indisponible</string>
     <string name="error_sign_in">Login ou mot de passe incorrect</string>
@@ -34,5 +34,27 @@
 	<string name="menu_account">Compte</string>
 	<string name="menu_account_informations">Informations</string>
 	<string name="menu_account_edit">Modifier</string>
+	
+	    <!-- Event -->
+    <string name="create_event">CREER UN EVENEMENT</string>
+    <string name="create_event_title">Titre : </string>
+    <string name="create_event_category">Catégorie : </string>
+    <string name="create_event_description">Description : </string>
+    <string name="create_event_date_start">Commence le : </string>
+    <string name="create_event_date_end">Fini le : </string>
+    <string name="create_event_date_start_button">Date début </string>
+    <string name="create_event_date_end_button">Date fin </string>
+    <string name="create_event_time_start_button">Heure début </string>
+    <string name="create_event_time_end_button">Heure fin </string>
+    <string name="create_event_address">Adresse : </string>
+        <string-array name="create_event_category_spinner">
+        <item>Fête</item>
+        <item>Musique</item>
+        <item>Film</item>
+        <item>Sport</item>
+        <item>Jeux vidéo</item>
+        <item>Autres</item>
+    </string-array>
+    
 
 </resources>

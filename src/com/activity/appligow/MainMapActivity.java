@@ -1,33 +1,35 @@
 package com.activity.appligow;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Criteria;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnLongClickListener;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
-import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
-
-import android.location.Address;
 
 import controller.library.FrontController;
 
@@ -74,8 +76,7 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 			
 			//on affiche tous les marqueurs de la liste
 			for (int i = 0 ; i < eventMarker.getListEventMarker().size() ; i++){
-				this.googleMap.addMarker(eventMarker.getListEventMarker().get(i));
-
+				this.googleMap.addMarker(eventMarker.getListEventMarker().get(i).getMarker());
 			}
 		}
 	}
@@ -149,48 +150,79 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 	}
 
 	@Override
-	public void onMapLongClick(LatLng point){
-		//Toast.makeText(this, coordonateToAdress(point), Toast.LENGTH_SHORT).show();
-		FrontController.redirect(this, CreateEventActivity.class);
+	public void onMapLongClick(final LatLng point){
+		
+		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				String address =  coordonateToAdress(point) ;
+				
+				Intent intent = new Intent(MainMapActivity.this, CreateEventActivity.class);
+				intent.putExtra("address", address);
+				
+				startActivity(intent);
+				
+			}
+		}).start(); 
+		
 	}
-	/*
-	 public String coordonateToAdress(LatLng position) {
-		 Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+	
+	/**
+	 * Translate coordonate (LatLng object) to a formatted address (understanding by user)
+	 * @param point where the user click
+	 * @return formatted address
+	 */
+	 public String coordonateToAdress(LatLng point) {
+		 String address = "INVALID ADDRESS (ERROR)";
+		 String request = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ point.latitude + "," + point.longitude + "&sensor=true"; // url to generate JSON file (reverse geocoding)
+		
+			try {				
+				
+				//fetch JSON file by Http request
+				URL url = new URL(request);
+				HttpURLConnection co = (HttpURLConnection) url.openConnection();
+				InputStream in = co.getInputStream() ;
+				BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+				String answer ="", temp="";
+				while((temp=reader.readLine())!=null){
+					answer += temp ;
+				}
+				reader.close();
+				
+				//if get JSON file
+				if (answer != ""){
+					
+					//navigate in JSON File node
+					JSONObject json1 = new JSONObject(answer);
+					JSONArray json2 = json1.getJSONArray("results");
+					JSONObject json3 = new JSONObject(json2.getString(0));
 
-         List<Address> addresses = null;
-
-         try {
-             addresses = geocoder.getFromLocation(position.latitude, position.longitude,1);
-
-         } catch (IOException e) {
-             e.printStackTrace();
-         }
-
-      // If the reverse geocode returned an address
-         if (addresses != null && addresses.size() > 0) {
-             // Get the first address
-             Address address = addresses.get(0);
-
-             String addressText = String.format("%s, %s, %s",
-                     // If there's a street address, add it
-                     address.getMaxAddressLineIndex() > 0 ?
-                             address.getAddressLine(0) : "",
-                     // Locality is usually a city
-                     address.getLocality(),
-                     // The country of the address
-                     address.getCountryName());
-             // Return the text
-             return addressText;
-         } else {
-             return "No address found";
-         }
-
+					//get the full formatted address
+					address = json3.getString("formatted_address") ;
+				}
+				return address ;
+				
+			} catch (ClientProtocolException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	 
+		//return at this point means an error occurs in fetch JSON file from the URL above
+		 return address ;
      }
-     */
+     
 
 	@Override
 	public void onInfoWindowClick(Marker marker) {
 		Toast.makeText(this, marker.getTitle().toString(), Toast.LENGTH_SHORT).show();
 		FrontController.redirect(this, EventInformationsActivity.class);
+
 	}
 }
