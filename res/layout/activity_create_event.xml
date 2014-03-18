@@ -146,9 +146,9 @@
         android:id="@+id/create_event_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/create_event_title_edittext"
-        android:layout_alignRight="@+id/create_event_category_spinner"
         android:layout_alignBaseline="@+id/create_event"
+        android:layout_alignBottom="@+id/create_event"
+        android:layout_alignParentRight="true"
         android:background="#5ACA67"
         android:text="@string/create_event_submit" />
 

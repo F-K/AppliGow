@@ -53,8 +53,10 @@
         <item>Film</item>
         <item>Sport</item>
         <item>Jeux vidéo</item>
+        <item>Restaurant</item>
         <item>Autres</item>
     </string-array>
+    <string name="create_event_submit">Valider</string>
     
 
 </resources>

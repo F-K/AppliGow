@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CreateEventActivity extends FragmentActivity implements OnClickListener{
 
@@ -20,6 +21,7 @@ public class CreateEventActivity extends FragmentActivity implements OnClickList
 	private Button endDateButton ;
 	private Button startTimeButton ;
 	private Button endTimeButton ;
+	private Button submitButton ;
 	
 	private TextView addressTextView ;
 	
@@ -61,6 +63,9 @@ public class CreateEventActivity extends FragmentActivity implements OnClickList
 		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this, R.array.create_event_category_spinner, android.R.layout.simple_spinner_item);
 		categoryAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		categorySpinner.setAdapter(categoryAdapter);
+		
+		submitButton = (Button) findViewById(R.id.create_event_submit);
+		submitButton.setOnClickListener(this);
 		
 	}
 
@@ -107,6 +112,8 @@ public class CreateEventActivity extends FragmentActivity implements OnClickList
 			case R.id.create_event_time_end_button :
 				timePickerFragment.show(getFragmentManager(), "time_picker_end");
 				break ;
+			case R.id.create_event_submit :
+				Toast.makeText(this, "SUBMIT", Toast.LENGTH_SHORT).show();
 		}
 	}	
 

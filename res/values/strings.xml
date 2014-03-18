@@ -5,11 +5,11 @@
     <string name="app_name">AppliGow</string>
     <string name="action_settings">Settings</string>
     <string name="home_loading_time">3000</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading&#8230;</string>
 
     <!-- Configuration -->
     <string name="port">1234</string>
-    <string name="server_ip">192.168.1.56</string>
+    <string name="server_ip">192.168.43.219</string>
     <string name="API_KEY">AIzaSyDUIgfsEMze8RgZJ9qVlEM407kz1SejXvI</string>
 
     <!-- User -->
@@ -26,8 +26,8 @@
     <string name="delete">Delete</string>
 
     <!-- Error -->
-    <string name="error_server">Server error...</string>
-    <string name="error_sync">Synchronized error...</string>
+    <string name="error_server">Server error&#8230;</string>
+    <string name="error_sync">Synchronized error&#8230;</string>
     <string name="error_missing_fields">All fields are required</string>
     <string name="error_login_unavailable">Login unavailable</string>
     <string name="error_sign_in">Invalid login or password</string>
@@ -61,8 +61,10 @@
         <item>Movie</item>
         <item>Sport</item>
         <item>Video game</item>
+        <item>Restaurant</item>
         <item>Others</item>
     </string-array>
+    <string name="create_event_submit">Submit</string>
     
     <string name="event_informations">Event informations activity</string>
 
