@@ -1,6 +1,7 @@
 package model.protocol;
 
 import java.io.IOException;
+import java.util.List;
 
 import library.ITransport;
 import model.event.Event;
@@ -47,6 +48,21 @@ public class ProtocolClient implements IProtocolClient {
 	@Override
 	public void sendEvent(Event event) throws IOException {
 		transport.send(event);
+	}
+
+	@Override
+	public List<Event> getAllEvents() throws ClassNotFoundException, IOException {
+		return (List<Event>) transport.receive();
+	}
+
+	@Override
+	public List<Event> getEvents(int idUser) throws ClassNotFoundException, IOException {
+		return (List<Event>) transport.receive();
+	}
+
+	@Override
+	public Event getEvent() throws ClassNotFoundException, IOException {
+		return (Event) transport.receive();
 	}
 
 }

@@ -131,6 +131,14 @@
 	            android:layout_margin="30dp"
 	            android:text="@string/edit" />
 	
+	        <Button
+	            android:id="@+id/buttonDelete"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:height="30dp"
+	            android:layout_margin="30dp"
+	            android:text="@string/delete" />
+	
 	    </LinearLayout>
 	
 	</LinearLayout>

@@ -16,6 +16,8 @@ public class Event implements Serializable {
 	private User user;
 	private String title;
 	private String address;
+	private double latitude;
+	private double longitude;
 	private String category;
 	private String description;
 	private Date dateStart;
@@ -55,6 +57,22 @@ public class Event implements Serializable {
 		this.address = address;
 	}
 
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
 	public String getCategory() {
 		return category;
 	}
@@ -85,6 +103,11 @@ public class Event implements Serializable {
 
 	public void setDateEnd(Date dateEnd) {
 		this.dateEnd = dateEnd;
+	}
+	
+	@Override
+	public String toString() {
+		return title;
 	}
 
 }

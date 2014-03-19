@@ -21,7 +21,11 @@ public class CreateEventService extends Service {
 			getProtocol().sendService("CREATE_EVENT");
 			getProtocol().sendEvent(event);
 			setSuccess(true);
+			Event eventDAO = getProtocol().getEvent();
+			EventManager.addEvent(eventDAO);
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}

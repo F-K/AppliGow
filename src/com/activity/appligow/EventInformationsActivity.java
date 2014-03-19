@@ -1,11 +1,15 @@
 package com.activity.appligow;
 
-import controller.library.FrontController;
-import android.os.Bundle;
+import model.event.Event;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
+import controller.event.DeleteEventListener;
+import controller.event.EditEventListener;
+import controller.library.FrontController;
 
 public class EventInformationsActivity extends Activity {
 
@@ -15,31 +19,38 @@ public class EventInformationsActivity extends Activity {
 		setContentView(R.layout.event_informations_activity);
 		
 		//retrieve event
-		//on going ...
+		Bundle bundle = getIntent().getExtras();
+		Event event = (Event) bundle.getSerializable("event");
 		
 		//title
 		TextView title = (TextView) findViewById(R.id.textViewTitle);
-		title.setText("My title");
+		title.setText(event.getTitle() + "   " + event.getId());
 		
 		//address
 		TextView address = (TextView) findViewById(R.id.textViewAddress);
-		address.setText("My address");
+		address.setText(event.getAddress());
 		
 		//category
 		TextView category = (TextView) findViewById(R.id.textViewCategory);
-		category.setText("Restaurant for example");
+		category.setText(event.getCategory());
 		
 		//date and hour start
-		TextView dateStart = (TextView) findViewById(R.id.textViewDateStart);
-		dateStart.setText("03-04-2014 14:00:00");
+		TextView viewDateStart = (TextView) findViewById(R.id.textViewDateStart);
+		viewDateStart.setText(event.getDateStart().toLocaleString());
 		
 		//date and hour end
-		TextView dateEnd = (TextView) findViewById(R.id.textViewDateEnd);
-		dateEnd.setText("04-04-2014 18:30:00");
+		TextView viewDateEnd = (TextView) findViewById(R.id.textViewDateEnd);
+		viewDateEnd.setText(event.getDateEnd().toLocaleString());
 		
 		//description
 		TextView description = (TextView) findViewById(R.id.textViewDescription);
-		description.setText("I am a description for this test biatch !");
+		description.setText(event.getDescription());
+		
+		//button
+		Button btnEdit = (Button) findViewById(R.id.buttonEdit);
+		//btnEdit.setOnClickListener(new EditEventListener(event));
+		Button btnDelete = (Button) findViewById(R.id.buttonDelete);
+		btnDelete.setOnClickListener(new DeleteEventListener(event));
 	}
 
 	@Override
@@ -55,9 +66,9 @@ public class EventInformationsActivity extends Activity {
 			case R.id.menu_map :
 				FrontController.redirect(this, MainMapActivity.class);
 				return true;
-	//		case R.id.menu_events :
-	//			FrontController.redirect(this, EventManagerActivity.class);
-	//			return true;
+			case R.id.menu_events :
+				FrontController.redirect(this, EventsUserActivity.class);
+				return true;
 			case R.id.menu_account_informations :
 				FrontController.redirect(this, UserInformationsActivity.class);
 				return true ;

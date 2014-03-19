@@ -228,57 +228,58 @@ containing a value of this type.
         public static final int sakidopuprod=0x7f020020;
     }
     public static final class id {
-        public static final int action_settings=0x7f050030;
-        public static final int buttonDelete=0x7f05002f;
+        public static final int action_settings=0x7f050031;
+        public static final int buttonDelete=0x7f050016;
         public static final int buttonEdit=0x7f050015;
-        public static final int buttonSignIn=0x7f05001d;
-        public static final int buttonSignUp=0x7f05001e;
+        public static final int buttonSignIn=0x7f05001f;
+        public static final int buttonSignUp=0x7f050020;
         public static final int buttonSubmit=0x7f05000f;
         public static final int datePickerDateEnd=0x7f050009;
         public static final int datePickerDateStart=0x7f050008;
         public static final int editTextDescription=0x7f05000e;
-        public static final int editTextFirstName=0x7f050021;
-        public static final int editTextLastName=0x7f050024;
-        public static final int editTextLogin=0x7f05001a;
-        public static final int editTextMail=0x7f050027;
-        public static final int editTextPassword=0x7f05001c;
+        public static final int editTextFirstName=0x7f050023;
+        public static final int editTextLastName=0x7f050026;
+        public static final int editTextLogin=0x7f05001c;
+        public static final int editTextMail=0x7f050029;
+        public static final int editTextPassword=0x7f05001e;
         public static final int editTextTitle=0x7f050005;
         public static final int hybrid=0x7f050004;
-        public static final int imageView1=0x7f050016;
-        public static final int imageView2=0x7f050017;
-        public static final int map=0x7f050018;
-        public static final int menu_account=0x7f050033;
-        public static final int menu_account_edit=0x7f050035;
-        public static final int menu_account_informations=0x7f050034;
-        public static final int menu_events=0x7f050032;
-        public static final int menu_map=0x7f050031;
+        public static final int imageView1=0x7f050018;
+        public static final int imageView2=0x7f050019;
+        public static final int listViewEvents=0x7f050017;
+        public static final int map=0x7f05001a;
+        public static final int menu_account=0x7f050034;
+        public static final int menu_account_edit=0x7f050036;
+        public static final int menu_account_informations=0x7f050035;
+        public static final int menu_events=0x7f050033;
+        public static final int menu_map=0x7f050032;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
         public static final int spinnerCategory=0x7f050007;
         public static final int tableRowDescription=0x7f05000c;
-        public static final int tableRowFirstName=0x7f05001f;
-        public static final int tableRowLastName=0x7f050022;
-        public static final int tableRowLogin=0x7f05002d;
-        public static final int tableRowMail=0x7f050025;
-        public static final int tableRowPassword=0x7f050028;
+        public static final int tableRowFirstName=0x7f050021;
+        public static final int tableRowLastName=0x7f050024;
+        public static final int tableRowLogin=0x7f05002f;
+        public static final int tableRowMail=0x7f050027;
+        public static final int tableRowPassword=0x7f05002a;
         public static final int terrain=0x7f050003;
         public static final int textViewAddress=0x7f050006;
         public static final int textViewCategory=0x7f050011;
         public static final int textViewDateEnd=0x7f050013;
         public static final int textViewDateStart=0x7f050012;
         public static final int textViewDescription=0x7f050014;
-        public static final int textViewFirstName=0x7f05002a;
+        public static final int textViewFirstName=0x7f05002c;
         public static final int textViewLabelDescription=0x7f05000d;
-        public static final int textViewLabelFirstName=0x7f050020;
-        public static final int textViewLabelLastName=0x7f050023;
-        public static final int textViewLabelLogin=0x7f05002e;
-        public static final int textViewLabelMail=0x7f050026;
-        public static final int textViewLabelPassword=0x7f050029;
-        public static final int textViewLastName=0x7f05002b;
-        public static final int textViewLogin=0x7f050019;
-        public static final int textViewMail=0x7f05002c;
-        public static final int textViewPassword=0x7f05001b;
+        public static final int textViewLabelFirstName=0x7f050022;
+        public static final int textViewLabelLastName=0x7f050025;
+        public static final int textViewLabelLogin=0x7f050030;
+        public static final int textViewLabelMail=0x7f050028;
+        public static final int textViewLabelPassword=0x7f05002b;
+        public static final int textViewLastName=0x7f05002d;
+        public static final int textViewLogin=0x7f05001b;
+        public static final int textViewMail=0x7f05002e;
+        public static final int textViewPassword=0x7f05001d;
         public static final int textViewTitle=0x7f050010;
         public static final int timePickerTimeEnd=0x7f05000b;
         public static final int timePickerTimeStart=0x7f05000a;
@@ -289,12 +290,13 @@ containing a value of this type.
     public static final class layout {
         public static final int event_create_activity=0x7f030000;
         public static final int event_informations_activity=0x7f030001;
-        public static final int home_loading_activity=0x7f030002;
-        public static final int main_map_activity=0x7f030003;
-        public static final int sign_in_activity=0x7f030004;
-        public static final int sign_up_activity=0x7f030005;
-        public static final int user_edit_activity=0x7f030006;
-        public static final int user_informations_activity=0x7f030007;
+        public static final int events_user_activity=0x7f030002;
+        public static final int home_loading_activity=0x7f030003;
+        public static final int main_map_activity=0x7f030004;
+        public static final int sign_in_activity=0x7f030005;
+        public static final int sign_up_activity=0x7f030006;
+        public static final int user_edit_activity=0x7f030007;
+        public static final int user_informations_activity=0x7f030008;
     }
     public static final class menu {
         public static final int event_informations=0x7f0b0000;
@@ -422,6 +424,7 @@ containing a value of this type.
         public static final int error_sign_in=0x7f06002d;
         public static final int error_sync=0x7f06002a;
         public static final int event_created=0x7f060043;
+        public static final int event_deleted=0x7f060044;
         public static final int event_informations=0x7f060038;
         /**  User 
  User 
@@ -444,6 +447,8 @@ containing a value of this type.
         /**  Configuration 
          */
         public static final int port=0x7f06001e;
+        /**      <string name="server_ip">192.168.1.177</string> 
+         */
         public static final int server_ip=0x7f06001f;
         /**  Action 
  Action 

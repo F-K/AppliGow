@@ -136,9 +136,9 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 			case R.id.menu_map :
 				FrontController.redirect(this, MainMapActivity.class);
 				return true;
-	//		case R.id.menu_events :
-	//			FrontController.redirect(this, EventManagerActivity.class);
-	//			return true;
+			case R.id.menu_events :
+				FrontController.redirect(this, EventsUserActivity.class);
+				return true;
 			case R.id.menu_account_informations :
 				FrontController.redirect(this, UserInformationsActivity.class);
 				return true ;
@@ -160,6 +160,8 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 				
 				Intent intent = new Intent(MainMapActivity.this, CreateEventActivity.class);
 				intent.putExtra("address", address);
+				intent.putExtra("latitude", point.latitude);
+				intent.putExtra("longitude", point.longitude);
 				
 				startActivity(intent);
 				

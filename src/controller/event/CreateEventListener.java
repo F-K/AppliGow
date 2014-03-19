@@ -26,13 +26,16 @@ public class CreateEventListener implements OnClickListener {
 	private EditText title, description;
 	private Spinner category;
 	private final String ADDRESS;
+	private final double LATITUDE, LONGITUDE;
 	private DatePicker datePickerStart, datePickerEnd;
 	private TimePicker timePickerStart, timePickerEnd;
 	
-	public CreateEventListener(EditText title, String ADDRESS, Spinner category, EditText description,
+	public CreateEventListener(EditText title, String ADDRESS, double LATITUDE, double LONGITUDE, Spinner category, EditText description,
 			DatePicker datePickerStart, DatePicker datePickerEnd, TimePicker timePickerStart, TimePicker timePickerEnd) {
 		this.title = title;
 		this.ADDRESS = ADDRESS;
+		this.LATITUDE = LATITUDE;
+		this.LONGITUDE = LONGITUDE;
 		this.category = category;
 		this.description = description;
 		this.datePickerStart = datePickerStart;
@@ -75,6 +78,8 @@ public class CreateEventListener implements OnClickListener {
 		event.setUser(UserManager.getUser());
 		event.setTitle(TITLE);
 		event.setAddress(ADDRESS);
+		event.setLatitude(LATITUDE);
+		event.setLongitude(LONGITUDE);
 		event.setCategory(CATEGORY);
 		event.setDescription(DESCRIPTION);
 		event.setDateStart(dateStart);

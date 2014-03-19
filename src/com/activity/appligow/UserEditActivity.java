@@ -52,15 +52,12 @@ public class UserEditActivity extends Activity {
 			case R.id.menu_map :
 				FrontController.redirect(this, MainMapActivity.class);
 				return true;
-	//		case R.id.menu_events :
-	//			FrontController.redirect(this, EventManagerActivity.class);
-	//			return true;
+			case R.id.menu_events :
+				FrontController.redirect(this, EventsUserActivity.class);
+				return true;
 			case R.id.menu_account_informations :
 				FrontController.redirect(this, UserInformationsActivity.class);
 				return true ;
-//			case R.id.menu_account_edit :
-//				FrontController.redirect(this, UserEditActivity.class);
-//				return true ;
 			default :
 				return super.onOptionsItemSelected(item);
 		}

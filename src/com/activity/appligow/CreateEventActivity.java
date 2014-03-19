@@ -30,6 +30,8 @@ public class CreateEventActivity extends Activity {
 		//address
 		TextView address = (TextView) findViewById(R.id.textViewAddress);
 		address.setText(intent.getStringExtra("address"));
+		double latitude = intent.getDoubleExtra("latitude", 0);
+		double longitude = intent.getDoubleExtra("longitude", 0);
 		
 		//category
 		Spinner category = (Spinner) findViewById(R.id.spinnerCategory);
@@ -54,7 +56,8 @@ public class CreateEventActivity extends Activity {
 		
 		//submit
 		Button submit = (Button) findViewById(R.id.buttonSubmit);
-		submit.setOnClickListener(new CreateEventListener(title, address.getText().toString(), category, description, datePickerStart, datePickerEnd, timePickerStart, timePickerEnd));
+		submit.setOnClickListener(new CreateEventListener(title, address.getText().toString(), latitude, longitude,
+				category, description, datePickerStart, datePickerEnd, timePickerStart, timePickerEnd));
 		
 		
 	}
@@ -72,9 +75,9 @@ public class CreateEventActivity extends Activity {
 			case R.id.menu_map :
 				FrontController.redirect(this, MainMapActivity.class);
 				return true;
-	//		case R.id.menu_events :
-	//			FrontController.redirect(this, EventManagerActivity.class);
-	//			return true;
+			case R.id.menu_events :
+				FrontController.redirect(this, EventsUserActivity.class);
+				return true;
 			case R.id.menu_account_informations :
 				FrontController.redirect(this, UserInformationsActivity.class);
 				return true ;
