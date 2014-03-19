@@ -1,71 +1,61 @@
 package com.activity.appligow;
 
+import controller.event.CreateEventListener;
 import controller.library.FrontController;
 import android.os.Bundle;
-import android.app.DialogFragment;
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.TimePicker;
 
-public class CreateEventActivity extends FragmentActivity implements OnClickListener{
+public class CreateEventActivity extends Activity {
 
-	private Button startDateButton ;
-	private Button endDateButton ;
-	private Button startTimeButton ;
-	private Button endTimeButton ;
-	private Button submitButton ;
-	
-	private TextView addressTextView ;
-	
-	private Spinner categorySpinner ;
-	
-	DialogFragment datePickerFragment ;
-	DialogFragment timePickerFragment ;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_create_event);
+		setContentView(R.layout.event_create_activity);
 		
-		//intent
-		Intent i = getIntent() ;
+		Intent intent = getIntent();
 		
-		//start button and end button
-		startDateButton = (Button) findViewById(R.id.create_event_date_start_button);
-		endDateButton = (Button) findViewById(R.id.create_event_date_end_button);
-		startTimeButton = (Button) findViewById(R.id.create_event_time_start_button);
-		endTimeButton = (Button) findViewById(R.id.create_event_time_end_button);
-		
-		//datepicker dialog and timepicker dialog
-		datePickerFragment = new DatePickerFragment() ;
-		timePickerFragment = new TimePickerFragment() ;
-		
-		//action on click
-		startDateButton.setOnClickListener(this);
-		endDateButton.setOnClickListener(this);
-		startTimeButton.setOnClickListener(this);
-		endTimeButton.setOnClickListener(this);
+		//title
+		EditText title = (EditText) findViewById(R.id.editTextTitle);
 		
 		//address
-		addressTextView = (TextView) findViewById(R.id.create_event_address2) ;
-		addressTextView.setText(i.getStringExtra("address"));
+		TextView address = (TextView) findViewById(R.id.textViewAddress);
+		address.setText(intent.getStringExtra("address"));
 		
 		//category
-		categorySpinner = (Spinner) findViewById(R.id.create_event_category_spinner);
-		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this, R.array.create_event_category_spinner, android.R.layout.simple_spinner_item);
+		Spinner category = (Spinner) findViewById(R.id.spinnerCategory);
+		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this, R.array.category_array, android.R.layout.simple_spinner_item);
 		categoryAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-		categorySpinner.setAdapter(categoryAdapter);
+		category.setAdapter(categoryAdapter);
 		
-		submitButton = (Button) findViewById(R.id.create_event_submit);
-		submitButton.setOnClickListener(this);
+		//date
+		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
+		//dateStart.setCalendarViewShown(false);
+		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
+		//dateEnd.setCalendarViewShown(false);
+		
+		//time
+		TimePicker timePickerStart = (TimePicker) findViewById(R.id.timePickerTimeStart);
+		timePickerStart.setIs24HourView(true);
+		TimePicker timePickerEnd = (TimePicker) findViewById(R.id.timePickerTimeEnd);
+		timePickerEnd.setIs24HourView(true);
+
+		//description
+		EditText description = (EditText) findViewById(R.id.editTextDescription);
+		
+		//submit
+		Button submit = (Button) findViewById(R.id.buttonSubmit);
+		submit.setOnClickListener(new CreateEventListener(title, address.getText().toString(), category, description, datePickerStart, datePickerEnd, timePickerStart, timePickerEnd));
+		
 		
 	}
 
@@ -95,26 +85,5 @@ public class CreateEventActivity extends FragmentActivity implements OnClickList
 				return super.onOptionsItemSelected(item);
 		}
 	}
-
-	@Override
-	public void onClick(View v) {
-		switch(v.getId()) {
-			case R.id.create_event_date_start_button :
-				datePickerFragment.show(getFragmentManager(), "date_picker_start");
-			
-				break ;
-			case R.id.create_event_date_end_button :
-				datePickerFragment.show(getFragmentManager(), "date_picker_end");
-				break ;
-			case R.id.create_event_time_start_button :
-				timePickerFragment.show(getFragmentManager(), "time_picker_start");
-				break ;
-			case R.id.create_event_time_end_button :
-				timePickerFragment.show(getFragmentManager(), "time_picker_end");
-				break ;
-			case R.id.create_event_submit :
-				Toast.makeText(this, "SUBMIT", Toast.LENGTH_SHORT).show();
-		}
-	}	
 
 }

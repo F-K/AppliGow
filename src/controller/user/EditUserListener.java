@@ -1,7 +1,7 @@
 package controller.user;
 
 import model.Service;
-import model.user.EditService;
+import model.user.EditUserService;
 import model.user.User;
 import model.user.UserManager;
 import android.view.View;
@@ -14,11 +14,11 @@ import com.activity.appligow.UserInformationsActivity;
 
 import controller.library.FrontController;
 
-public class EditListener implements OnClickListener {
+public class EditUserListener implements OnClickListener {
 	
 	private EditText firstName, lastName, mail, password;
 	
-	public EditListener(EditText firstName, EditText lastName, EditText mail, EditText password) {
+	public EditUserListener(EditText firstName, EditText lastName, EditText mail, EditText password) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.mail = mail;
@@ -53,7 +53,7 @@ public class EditListener implements OnClickListener {
 		user.setMail(MAIL);
 		user.setPassword(PASSWORD);
 		try {
-			Service service = new EditService(user, SERVER_IP, PORT);
+			Service service = new EditUserService(user, SERVER_IP, PORT);
 			// Wait until the thread died
 			service.join();
 			if(service.getSuccess())
@@ -65,14 +65,6 @@ public class EditListener implements OnClickListener {
 		} catch (InterruptedException e) {
 			Toast.makeText(v.getContext(), v.getContext().getString(R.string.error_server), Toast.LENGTH_SHORT).show();
 		}
-		/*
-		// User doesn't exists in DB
-		if(UserManager.getUser() == null) {
-			message = v.getContext().getString(R.string.error_sign_in);
-			Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
-		} else
-			FrontController.redirect(v.getContext(), UserInformationsActivity.class);
-		*/
 	}
 
 }

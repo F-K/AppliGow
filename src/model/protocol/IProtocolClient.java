@@ -2,6 +2,7 @@ package model.protocol;
 
 import java.io.IOException;
 
+import model.event.Event;
 import model.user.User;
 
 public interface IProtocolClient {
@@ -12,5 +13,6 @@ public interface IProtocolClient {
 	public boolean getUserExist() throws ClassNotFoundException, IOException;
 	public User getUser() throws ClassNotFoundException, IOException;
 	public void sendUser(User user) throws IOException;
+	public void sendEvent(Event event) throws IOException;
 
 }

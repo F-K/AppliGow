@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:gravity="center_vertical" >
+	
+	    <TableLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+	        
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/title" />
+	
+	            <TextView
+	                android:id="@+id/textViewTitle"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	
+			</TableRow>
+	        
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/address" />
+	
+	            <TextView
+	                android:id="@+id/textViewAddress"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	
+			</TableRow>
+	        
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/category" />
+	
+	            <TextView
+	                android:id="@+id/textViewCategory"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	
+			</TableRow>
+	        
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/dateStart" />
+	
+	            <TextView
+	                android:id="@+id/textViewDateStart"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	
+			</TableRow>
+	        
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/dateEnd" />
+	
+	            <TextView
+	                android:id="@+id/textViewDateEnd"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	
+			</TableRow>
+	        
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="20dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/description" />
+	
+	            <TextView
+	                android:id="@+id/textViewDescription"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	
+			</TableRow>
+		</TableLayout>
+		
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal" >
+	
+	        <Button
+	            android:id="@+id/buttonEdit"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:height="30dp"
+	            android:layout_margin="30dp"
+	            android:text="@string/edit" />
+	
+	    </LinearLayout>
+	
+	</LinearLayout>
+</ScrollView>

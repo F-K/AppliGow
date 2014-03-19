@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import controller.library.FrontController;
-import controller.user.EditListener;
+import controller.user.EditUserListener;
 
 public class UserEditActivity extends Activity {
 
@@ -36,7 +36,7 @@ public class UserEditActivity extends Activity {
 		}
 		
 		Button btnEdit = (Button) findViewById(R.id.buttonEdit);
-		btnEdit.setOnClickListener(new EditListener(firstName, lastName, mail, password));
+		btnEdit.setOnClickListener(new EditUserListener(firstName, lastName, mail, password));
 	}
 
 	@Override

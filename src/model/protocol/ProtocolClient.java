@@ -3,6 +3,7 @@ package model.protocol;
 import java.io.IOException;
 
 import library.ITransport;
+import model.event.Event;
 import model.user.User;
 
 public class ProtocolClient implements IProtocolClient {
@@ -41,6 +42,11 @@ public class ProtocolClient implements IProtocolClient {
 	@Override
 	public void sendUser(User user) throws IOException {
 		transport.send(user);
+	}
+
+	@Override
+	public void sendEvent(Event event) throws IOException {
+		transport.send(event);
 	}
 
 }

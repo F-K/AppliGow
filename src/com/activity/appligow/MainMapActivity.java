@@ -76,7 +76,8 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 			
 			//on affiche tous les marqueurs de la liste
 			for (int i = 0 ; i < eventMarker.getListEventMarker().size() ; i++){
-				this.googleMap.addMarker(eventMarker.getListEventMarker().get(i).getMarker());
+				this.googleMap.addMarker(eventMarker.getListEventMarker().get(i));
+
 			}
 		}
 	}
@@ -148,7 +149,6 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 				return super.onOptionsItemSelected(item);
 		}
 	}
-
 	@Override
 	public void onMapLongClick(final LatLng point){
 		

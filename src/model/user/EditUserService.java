@@ -4,11 +4,11 @@ import java.io.IOException;
 
 import model.Service;
 
-public class EditService extends Service {
+public class EditUserService extends Service {
 	
 	private User user;
 	
-	public EditService(User user, String serverIP, int port) {
+	public EditUserService(User user, String serverIP, int port) {
 		super(serverIP, port);
 		this.user = user;
 	}

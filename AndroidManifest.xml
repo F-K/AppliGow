@@ -47,40 +47,24 @@
         <!-- 2014-02-09 | Clé pour l'utilisatoin de la map -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/API_KEY" />
+            android:value="AIzaSyAsxIMwz5XYlPSa-STttaxnKKqX0TX-tyo" />
 
         <activity
             android:name="com.activity.appligow.HomeLoadingActivity"
-            android:label="@string/app_name" 
-            android:screenOrientation="portrait">"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity 
-            android:name="com.activity.appligow.SignInActivity"
-         	android:screenOrientation="portrait" />
-        <activity 
-            android:name="com.activity.appligow.SignUpActivity"
-            android:screenOrientation="portrait"/>
-        <activity 
-            android:name="com.activity.appligow.MainMapActivity"
-            android:screenOrientation="portrait" />
-        <activity 
-            android:name="com.activity.appligow.UserInformationsActivity"
-            android:screenOrientation="portrait" />
-        <activity 
-            android:name="com.activity.appligow.UserEditActivity"
-            android:screenOrientation="portrait" />
-        <activity 
-            android:name="com.activity.appligow.CreateEventActivity"
-            android:screenOrientation="portrait" />
-        <activity 
-            android:name="com.activity.appligow.EventInformationsActivity"
-            android:screenOrientation="portrait"/>
-        
+        <activity android:name="com.activity.appligow.SignInActivity" />
+        <activity android:name="com.activity.appligow.SignUpActivity" />
+        <activity android:name="com.activity.appligow.MainMapActivity" />
+        <activity android:name="com.activity.appligow.UserInformationsActivity" />
+        <activity android:name="com.activity.appligow.UserEditActivity" />
+        <activity android:name="com.activity.appligow.CreateEventActivity" />
+        <activity android:name="com.activity.appligow.EventInformationsActivity"/>
     </application>
 
 </manifest>
