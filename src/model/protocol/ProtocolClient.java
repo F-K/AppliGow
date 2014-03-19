@@ -56,7 +56,7 @@ public class ProtocolClient implements IProtocolClient {
 	}
 
 	@Override
-	public List<Event> getEvents(int idUser) throws ClassNotFoundException, IOException {
+	public List<Event> getEvents() throws ClassNotFoundException, IOException {
 		return (List<Event>) transport.receive();
 	}
 

@@ -28,17 +28,18 @@ public class SignInService extends SignUserService {
 			User user = null;
 			
 			// User exists
-			if(getProtocol().getUserExist())
+			if(getProtocol().getUserExist()) {
 				user = getProtocol().getUser();
+				
+				// Retrieve events
+				List<Event> allEvents = getProtocol().getAllEvents();
+				List<Event> events = getProtocol().getEvents();
+				EventManager.setAllEvents(allEvents);
+				EventManager.setEvents(events);
+			}
 			
 			// Set the current user
 			UserManager.setUser(user);
-			
-			// Retrieve events
-			List<Event> allEvents = getProtocol().getAllEvents();
-			List<Event> events = getProtocol().getEvents(user.getId());
-			EventManager.setAllEvents(allEvents);
-			EventManager.setEvents(events);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {

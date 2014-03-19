@@ -66,6 +66,7 @@
     </string-array>
     <string name="title_required">Title is required</string>
     <string name="event_created">Your event is created</string>
+    <string name="event_updated">Your event is updated</string>
     <string name="event_deleted">Your event is deleted</string>
 
 </resources>

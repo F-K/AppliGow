@@ -2,31 +2,32 @@ package com.activity.appligow;
 
 import model.event.Event;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
-import controller.event.DeleteEventListener;
+import android.widget.TimePicker;
 import controller.event.EditEventListener;
 import controller.library.FrontController;
 
-public class EventInformationsActivity extends Activity {
+public class EventEditActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.event_informations_activity);
+		setContentView(R.layout.event_edit_activity);
 		
 		//retrieve event
 		Bundle bundle = getIntent().getExtras();
 		Event event = (Event) bundle.getSerializable("event");
 		
 		//title
-		TextView title = (TextView) findViewById(R.id.textViewTitle);
+		EditText title = (EditText) findViewById(R.id.editTextTitle);
 		title.setText(event.getTitle());
 		
 		//address
@@ -34,38 +35,32 @@ public class EventInformationsActivity extends Activity {
 		address.setText(event.getAddress());
 		
 		//category
-		TextView category = (TextView) findViewById(R.id.textViewCategory);
-		category.setText(event.getCategory());
+		Spinner category = (Spinner) findViewById(R.id.spinnerCategory);
+		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this, R.array.category_array, android.R.layout.simple_spinner_item);
+		categoryAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+		category.setAdapter(categoryAdapter);
+		category.setSelection(categoryAdapter.getPosition(event.getCategory()));
 		
-		//date and hour start
-		TextView viewDateStart = (TextView) findViewById(R.id.textViewDateStart);
-		viewDateStart.setText(event.getDateStart().toLocaleString());
+		//date
+		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
+		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
 		
-		//date and hour end
-		TextView viewDateEnd = (TextView) findViewById(R.id.textViewDateEnd);
-		viewDateEnd.setText(event.getDateEnd().toLocaleString());
-		
+		//time
+		TimePicker timePickerStart = (TimePicker) findViewById(R.id.timePickerTimeStart);
+		timePickerStart.setIs24HourView(true);
+		TimePicker timePickerEnd = (TimePicker) findViewById(R.id.timePickerTimeEnd);
+		timePickerEnd.setIs24HourView(true);
+
 		//description
-		TextView description = (TextView) findViewById(R.id.textViewDescription);
+		EditText description = (EditText) findViewById(R.id.editTextDescription);
 		description.setText(event.getDescription());
 		
-		//button
-		Button btnEdit = (Button) findViewById(R.id.buttonEdit);
-		btnEdit.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Bundle bundle = getIntent().getExtras();
-				Event event = (Event) bundle.getSerializable("event");
-				
-				Intent intent = new Intent(EventInformationsActivity.this, EventEditActivity.class);
-				bundle = new Bundle();
-				bundle.putSerializable("event", event);
-				intent.putExtras(bundle);
-				startActivity(intent);
-			}
-		});
-		Button btnDelete = (Button) findViewById(R.id.buttonDelete);
-		btnDelete.setOnClickListener(new DeleteEventListener(event));
+		//button edit
+		Button submit = (Button) findViewById(R.id.buttonEdit);
+		submit.setOnClickListener(new EditEventListener(event, title, category, description,
+				datePickerStart, datePickerEnd, timePickerStart, timePickerEnd));
+		
+		
 	}
 
 	@Override
@@ -74,7 +69,7 @@ public class EventInformationsActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()){
@@ -94,5 +89,5 @@ public class EventInformationsActivity extends Activity {
 				return super.onOptionsItemSelected(item);
 		}
 	}
-	
+
 }

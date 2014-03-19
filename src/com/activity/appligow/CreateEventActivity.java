@@ -41,9 +41,7 @@ public class CreateEventActivity extends Activity {
 		
 		//date
 		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
-		//dateStart.setCalendarViewShown(false);
 		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
-		//dateEnd.setCalendarViewShown(false);
 		
 		//time
 		TimePicker timePickerStart = (TimePicker) findViewById(R.id.timePickerTimeStart);

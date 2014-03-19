@@ -16,7 +16,7 @@ public interface IProtocolClient {
 	public void sendUser(User user) throws IOException;
 	public void sendEvent(Event event) throws IOException;
 	public List<Event> getAllEvents() throws ClassNotFoundException, IOException;
-	public List<Event> getEvents(int idUser) throws ClassNotFoundException, IOException;
+	public List<Event> getEvents() throws ClassNotFoundException, IOException;
 	public Event getEvent() throws ClassNotFoundException, IOException;
 
 }

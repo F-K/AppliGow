@@ -26,7 +26,7 @@ public class EditEventService extends Service {
 			// MAJ events
 			getProtocol().sendUser(UserManager.getUser());
 			List<Event> allEvents = getProtocol().getAllEvents();
-			List<Event> events = getProtocol().getEvents(UserManager.getUser().getId());
+			List<Event> events = getProtocol().getEvents();
 			EventManager.setAllEvents(allEvents);
 			EventManager.setEvents(events);
 			

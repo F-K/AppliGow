@@ -64,8 +64,9 @@
         <activity android:name="com.activity.appligow.UserInformationsActivity" />
         <activity android:name="com.activity.appligow.UserEditActivity" />
         <activity android:name="com.activity.appligow.CreateEventActivity" />
-        <activity android:name="com.activity.appligow.EventInformationsActivity"/>
-        <activity android:name="com.activity.appligow.EventsUserActivity"/>
+        <activity android:name="com.activity.appligow.EventInformationsActivity" />
+        <activity android:name="com.activity.appligow.EventsUserActivity" />
+        <activity android:name="com.activity.appligow.EventEditActivity" />
     </application>
 
 </manifest>
