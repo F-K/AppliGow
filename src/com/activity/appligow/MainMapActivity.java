@@ -77,7 +77,6 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 			//on affiche tous les marqueurs de la liste
 			for (int i = 0 ; i < eventMarker.getListEventMarker().size() ; i++){
 				this.googleMap.addMarker(eventMarker.getListEventMarker().get(i));
-
 			}
 		}
 	}
@@ -206,13 +205,10 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 				return address ;
 				
 			} catch (ClientProtocolException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	 
@@ -223,8 +219,7 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 
 	@Override
 	public void onInfoWindowClick(Marker marker) {
-		Toast.makeText(this, marker.getTitle().toString(), Toast.LENGTH_SHORT).show();
-		FrontController.redirect(this, EventInformationsActivity.class);
+		Toast.makeText(this, marker.getTitle() + "\n" + marker.getSnippet(), Toast.LENGTH_SHORT).show();
 
 	}
 }

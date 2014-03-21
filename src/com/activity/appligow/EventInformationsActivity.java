@@ -11,7 +11,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import controller.event.DeleteEventListener;
-import controller.event.EditEventListener;
 import controller.library.FrontController;
 
 public class EventInformationsActivity extends Activity {

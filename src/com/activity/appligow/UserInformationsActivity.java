@@ -3,6 +3,7 @@ package com.activity.appligow;
 import model.user.User;
 import model.user.UserManager;
 import controller.library.FrontController;
+import controller.user.DeleteUserListener;
 import controller.user.TowardEditListener;
 import android.app.Activity;
 import android.os.Bundle;
@@ -39,7 +40,8 @@ public class UserInformationsActivity extends Activity {
 		
 		Button btnEdit = (Button) findViewById(R.id.buttonEdit);
 		btnEdit.setOnClickListener(new TowardEditListener());
-		//Button btnDelete = (Button) findViewById(R.id.buttonDelete);
+		Button btnDelete = (Button) findViewById(R.id.buttonDelete);
+		btnDelete.setOnClickListener(new DeleteUserListener(user));
 	}
 
 	@Override

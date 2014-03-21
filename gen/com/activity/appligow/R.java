@@ -428,7 +428,8 @@ containing a value of this type.
         public static final int event_deleted=0x7f060045;
         public static final int event_informations=0x7f060038;
         public static final int event_updated=0x7f060044;
-        /**  User 
+        /**      <string name="server_ip">192.168.0.14</string> 
+ User 
  User 
          */
         public static final int first_name=0x7f060020;
@@ -449,8 +450,6 @@ containing a value of this type.
         /**  Configuration 
          */
         public static final int port=0x7f06001e;
-        /**      <string name="server_ip">192.168.1.177</string> 
-         */
         public static final int server_ip=0x7f06001f;
         /**  Action 
  Action 

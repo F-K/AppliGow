@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import model.Service;
-import model.user.UserManager;
 
 public class DeleteEventService extends Service {
 
