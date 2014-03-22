@@ -34,7 +34,10 @@
     <string name="undefined">Undefined</string>
     <string name="error_missing_password">Missing password</string>
     <string name="error_password">Invalid password</string>
+<<<<<<< HEAD
     <string name="error_mail">Invalid mail</string>
+=======
+>>>>>>> 11eebeb333b53d491d97ed688598925a5a0424bd
     <string name="error_address">INVALID ADDRESS (ERROR)</string>
 
     <!-- Menu -->
