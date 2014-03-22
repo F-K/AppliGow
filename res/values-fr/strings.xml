@@ -28,6 +28,7 @@
     <string name="error_missing_password">Mot de passe obligatoire</string>
     <string name="error_password">Mot de passe incorrect</string>
     <string name="error_mail">Mail incorrect</string>
+    <string name="error_check_localization">Veuillez cocher le service de localisation</string>
     
 	<!-- Menu -->
 	<string name="menu_map">Carte</string>

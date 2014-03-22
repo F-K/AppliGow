@@ -35,6 +35,7 @@
     <string name="error_missing_password">Missing password</string>
     <string name="error_password">Invalid password</string>
     <string name="error_mail">Invalid mail</string>
+    <string name="error_check_localization">Please check Google\'s location service</string>
     <string name="error_address">INVALID ADDRESS (ERROR)</string>
 
     <!-- Menu -->

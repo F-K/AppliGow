@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -50,6 +51,15 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_map_activity);
+		
+		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) && !locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+			//All location services are disabled
+			Toast.makeText(this, getString(R.string.error_check_localization), Toast.LENGTH_LONG).show();
+			Intent intent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+			startActivity(intent);
+			return;
+		}
 		
 		// get a handle to the map
 		googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
