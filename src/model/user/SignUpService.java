@@ -1,10 +1,6 @@
 package model.user;
 
 import java.io.IOException;
-import java.util.List;
-
-import model.event.Event;
-import model.event.EventManager;
 
 public class SignUpService extends SignUserService {
 	
@@ -28,12 +24,8 @@ public class SignUpService extends SignUserService {
 			User user = null;
 			
 			// User doesn't exist
-			if(!getProtocol().getUserExist()) {
+			if(!getProtocol().getUserExist())
 				user = getProtocol().getUser();
-				// Retrieve events
-				List<Event> allEvents = getProtocol().getAllEvents();
-				EventManager.setAllEvents(allEvents);
-			}
 			
 			// Set the current user
 			UserManager.setUser(user);

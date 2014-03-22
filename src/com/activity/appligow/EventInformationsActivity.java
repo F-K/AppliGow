@@ -1,6 +1,7 @@
 package com.activity.appligow;
 
 import model.event.Event;
+import model.user.UserManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,21 +51,26 @@ public class EventInformationsActivity extends Activity {
 		
 		//button
 		Button btnEdit = (Button) findViewById(R.id.buttonEdit);
-		btnEdit.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Bundle bundle = getIntent().getExtras();
-				Event event = (Event) bundle.getSerializable("event");
-				
-				Intent intent = new Intent(EventInformationsActivity.this, EventEditActivity.class);
-				bundle = new Bundle();
-				bundle.putSerializable("event", event);
-				intent.putExtras(bundle);
-				startActivity(intent);
-			}
-		});
 		Button btnDelete = (Button) findViewById(R.id.buttonDelete);
-		btnDelete.setOnClickListener(new DeleteEventListener(event));
+		if(UserManager.getUser().getId().intValue() == event.getUser().getId().intValue()) {
+			btnEdit.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					Bundle bundle = getIntent().getExtras();
+					Event event = (Event) bundle.getSerializable("event");
+					
+					Intent intent = new Intent(EventInformationsActivity.this, EventEditActivity.class);
+					bundle = new Bundle();
+					bundle.putSerializable("event", event);
+					intent.putExtras(bundle);
+					startActivity(intent);
+				}
+			});
+			btnDelete.setOnClickListener(new DeleteEventListener(event));
+		} else {
+			btnEdit.setVisibility(View.INVISIBLE);
+			btnDelete.setVisibility(View.INVISIBLE);
+		}
 	}
 
 	@Override

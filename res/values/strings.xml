@@ -9,8 +9,8 @@
 
     <!-- Configuration -->
     <string name="port">1234</string>
-    <string name="server_ip">192.168.1.177</string>
-<!--     <string name="server_ip">192.168.0.14</string> -->
+<!--     <string name="server_ip">192.168.1.177</string> -->
+    <string name="server_ip">192.168.0.10</string>
 
     <!-- User -->
     <string name="first_name">First name</string>
@@ -34,6 +34,8 @@
     <string name="undefined">Undefined</string>
     <string name="error_missing_password">Missing password</string>
     <string name="error_password">Invalid password</string>
+    <string name="error_mail">Invalid mail</string>
+    <string name="error_address">INVALID ADDRESS (ERROR)</string>
 
     <!-- Menu -->
     <string name="menu_map">Map</string>
@@ -41,16 +43,13 @@
     <string name="menu_account">Account</string>
     <string name="menu_account_informations">Informations</string>
     <string name="menu_account_edit">Edit</string>
-    <string name="title_activity_create_event">CreateEventActivity</string>
     
     <!-- Event -->
-    <string name="create_event">Create event activity</string>
-    <string name="event_informations">Event informations activity</string>
     <string name="title">Title</string>
     <string name="address">Address</string>
     <string name="category">Category</string>
-    <string name="dateStart">Date start</string>
-    <string name="dateEnd">Date end</string>
+    <string name="dateStart">Start date</string>
+    <string name="dateEnd">End date</string>
     <string name="timeStart">Time start</string>
     <string name="timeEnd">Time end</string>
     <string name="description">Description</string>
@@ -68,5 +67,6 @@
     <string name="event_created">Your event is created</string>
     <string name="event_updated">Your event is updated</string>
     <string name="event_deleted">Your event is deleted</string>
+    <string name="no_event">You have not events !\n\nTouch HERE or press Map tab\nto add an event to your events list !</string>
 
 </resources>

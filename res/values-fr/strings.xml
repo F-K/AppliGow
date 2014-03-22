@@ -27,6 +27,7 @@
     <string name="undefined">Indéfini</string>
     <string name="error_missing_password">Mot de passe obligatoire</string>
     <string name="error_password">Mot de passe incorrect</string>
+    <string name="error_mail">Mail incorrect</string>
     
 	<!-- Menu -->
 	<string name="menu_map">Carte</string>
@@ -34,5 +35,30 @@
 	<string name="menu_account">Compte</string>
 	<string name="menu_account_informations">Informations</string>
 	<string name="menu_account_edit">Modifier</string>
+    
+    <!-- Event -->
+    <string name="title">Titre</string>
+    <string name="address">Adresse</string>
+    <string name="category">Categorie</string>
+    <string name="dateStart">Date début</string>
+    <string name="dateEnd">Date fin</string>
+    <string name="timeStart">Heure début</string>
+    <string name="timeEnd">Heure fin</string>
+    <string name="description">Description</string>
+    <string name="submit">Valider</string>
+    <string-array name="category_array">
+        <item>Fête</item>
+        <item>Musique</item>
+        <item>Film</item>
+        <item>Sport</item>
+        <item>Jeux vidéo</item>
+        <item>Restaurant</item>
+        <item>Autres</item>
+    </string-array>
+    <string name="title_required">Titre obligatoire</string>
+    <string name="event_created">Votre événement a été créé</string>
+    <string name="event_updated">Votre événement a été mis à jour</string>
+    <string name="event_deleted">Votre événement a été supprimé</string>
+    <string name="no_event">Vous n\'avez pas d\'événements !\n\nToucher ICI ou presser l\'onget CARTE\npour ajouter un événement à votre liste d\'événements !</string>
 
 </resources>

@@ -307,7 +307,7 @@ containing a value of this type.
         /**  AppliGow 
          */
         public static final int action_settings=0x7f06001b;
-        public static final int address=0x7f06003a;
+        public static final int address=0x7f060039;
         /**  AppliGow 
          */
         public static final int app_name=0x7f06001a;
@@ -334,7 +334,7 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f060014;
-        public static final int category=0x7f06003b;
+        public static final int category=0x7f06003a;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -406,15 +406,14 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        /**  Event 
-         */
-        public static final int create_event=0x7f060037;
-        public static final int dateEnd=0x7f06003d;
-        public static final int dateStart=0x7f06003c;
+        public static final int dateEnd=0x7f06003c;
+        public static final int dateStart=0x7f06003b;
         public static final int delete=0x7f060028;
-        public static final int description=0x7f060040;
+        public static final int description=0x7f06003f;
         public static final int edit=0x7f060027;
+        public static final int error_address=0x7f060032;
         public static final int error_login_unavailable=0x7f06002c;
+        public static final int error_mail=0x7f060031;
         public static final int error_missing_fields=0x7f06002b;
         public static final int error_missing_password=0x7f06002f;
         public static final int error_password=0x7f060030;
@@ -424,12 +423,10 @@ containing a value of this type.
         public static final int error_server=0x7f060029;
         public static final int error_sign_in=0x7f06002d;
         public static final int error_sync=0x7f06002a;
-        public static final int event_created=0x7f060043;
-        public static final int event_deleted=0x7f060045;
-        public static final int event_informations=0x7f060038;
-        public static final int event_updated=0x7f060044;
-        /**      <string name="server_ip">192.168.0.14</string> 
- User 
+        public static final int event_created=0x7f060042;
+        public static final int event_deleted=0x7f060044;
+        public static final int event_updated=0x7f060043;
+        /**  User 
  User 
          */
         public static final int first_name=0x7f060020;
@@ -438,30 +435,35 @@ containing a value of this type.
         public static final int loading=0x7f06001d;
         public static final int login=0x7f060023;
         public static final int mail=0x7f060022;
-        public static final int menu_account=0x7f060033;
-        public static final int menu_account_edit=0x7f060035;
-        public static final int menu_account_informations=0x7f060034;
-        public static final int menu_events=0x7f060032;
+        public static final int menu_account=0x7f060035;
+        public static final int menu_account_edit=0x7f060037;
+        public static final int menu_account_informations=0x7f060036;
+        public static final int menu_events=0x7f060034;
         /**  Menu 
  Menu 
          */
-        public static final int menu_map=0x7f060031;
+        public static final int menu_map=0x7f060033;
+        public static final int no_event=0x7f060045;
         public static final int password=0x7f060024;
         /**  Configuration 
          */
         public static final int port=0x7f06001e;
+        /**      <string name="server_ip">192.168.1.177</string> 
+         */
         public static final int server_ip=0x7f06001f;
         /**  Action 
  Action 
          */
         public static final int sign_in=0x7f060025;
         public static final int sign_up=0x7f060026;
-        public static final int submit=0x7f060041;
-        public static final int timeEnd=0x7f06003f;
-        public static final int timeStart=0x7f06003e;
-        public static final int title=0x7f060039;
-        public static final int title_activity_create_event=0x7f060036;
-        public static final int title_required=0x7f060042;
+        public static final int submit=0x7f060040;
+        public static final int timeEnd=0x7f06003e;
+        public static final int timeStart=0x7f06003d;
+        /**  Event 
+ Event 
+         */
+        public static final int title=0x7f060038;
+        public static final int title_required=0x7f060041;
         public static final int undefined=0x7f06002e;
     }
     public static final class style {

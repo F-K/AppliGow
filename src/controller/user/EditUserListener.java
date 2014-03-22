@@ -1,6 +1,7 @@
 package controller.user;
 
 import model.Service;
+import model.library.Regex;
 import model.user.EditUserService;
 import model.user.User;
 import model.user.UserManager;
@@ -38,6 +39,13 @@ public class EditUserListener implements OnClickListener {
 		// Login and password must to be not empty
 		if(PASSWORD.equals("")) {
 			message = v.getContext().getString(R.string.error_missing_password);
+			Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
+			return;
+		}
+		
+		// Check mail validity
+		if(!MAIL.equals("") && !Regex.isEmailAdress(MAIL)) {
+			message = v.getContext().getString(R.string.error_mail);
 			Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
 			return;
 		}

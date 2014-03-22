@@ -3,6 +3,7 @@ package model.user;
 import java.io.IOException;
 
 import model.Service;
+import model.library.Hash;
 
 public class EditUserService extends Service {
 	
@@ -10,6 +11,7 @@ public class EditUserService extends Service {
 	
 	public EditUserService(User user, String serverIP, int port) {
 		super(serverIP, port);
+		user.setPassword(Hash.sha1(user.getPassword()));
 		this.user = user;
 	}
 
