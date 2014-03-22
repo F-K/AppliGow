@@ -3,6 +3,8 @@ package model.event;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Service;
+
 public class EventManager {
 	
 	private static List<Event> allEvents = new ArrayList<Event>();
@@ -27,6 +29,16 @@ public class EventManager {
 	public static void addEvent(Event event) {
 		allEvents.add(event);
 		events.add(event);
+	}
+	
+	public static void initAllEvents(String serverIP, int port) {
+		try {
+			Service service = new GetEventsService(serverIP, port);
+			// Wait until the thread died
+			service.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 

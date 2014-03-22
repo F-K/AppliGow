@@ -6,6 +6,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+
+import model.event.Event;
+import model.event.EventManager;
+import model.user.UserManager;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONArray;
@@ -21,22 +28,23 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import controller.library.FrontController;
 
 public class MainMapActivity extends FragmentActivity implements OnMapLongClickListener, OnInfoWindowClickListener  {
 	
 	private GoogleMap googleMap;
-	private EventMarkerOverlay eventMarker ;
+	private HashMap<Marker, Event> markers = new HashMap<Marker, Event>();
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,19 +73,14 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 				googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentCoordinates, 12));
 			}
 			
-			//réaction aux clics longs sur la map
+			// reaction about a long click
 			googleMap.setOnMapLongClickListener(this);
 			
-			//réaction aux clics sur les infoWindow des Marker
+			// reaction about an infoWindow Marker
 			googleMap.setOnInfoWindowClickListener(this);
 			
-			//créé la liste des marqueurs d'evenements
-			this.eventMarker = new EventMarkerOverlay();
-			
-			//on affiche tous les marqueurs de la liste
-			for (int i = 0 ; i < eventMarker.getListEventMarker().size() ; i++){
-				this.googleMap.addMarker(eventMarker.getListEventMarker().get(i));
-			}
+			// initialize all the events in the map
+			initEvents();
 		}
 	}
 	
@@ -148,6 +151,7 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 				return super.onOptionsItemSelected(item);
 		}
 	}
+	
 	@Override
 	public void onMapLongClick(final LatLng point){
 		
@@ -175,7 +179,7 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 	 * @return formatted address
 	 */
 	 public String coordonateToAdress(LatLng point) {
-		 String address = "INVALID ADDRESS (ERROR)";
+		 String address = getString(R.string.error_address);
 		 String request = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ point.latitude + "," + point.longitude + "&sensor=true"; // url to generate JSON file (reverse geocoding)
 		
 			try {				
@@ -215,11 +219,49 @@ public class MainMapActivity extends FragmentActivity implements OnMapLongClickL
 		//return at this point means an error occurs in fetch JSON file from the URL above
 		 return address ;
      }
-     
+	 
+	private void initEvents() {
+		// retrieve all events
+		EventManager.initAllEvents(getString(R.string.server_ip), Integer.parseInt(getString(R.string.port)));
+		List<Event> allEvents = EventManager.getAllEvents();
+		
+		// retrieve the current user id
+		int userId = UserManager.getUser().getId();
+		
+		// retrieve today date in order to compare with the event's end date
+		Date dateToday = new Date();
+		
+		// for each event
+		for(Event event : allEvents) {
+			// add the event to the map if today < event end date
+			if(dateToday.compareTo(event.getDateEnd()) < 0) {
+				// build the MarkerOptions
+				LatLng position = new LatLng(event.getLatitude(), event.getLongitude());
+				MarkerOptions opts = new MarkerOptions().position(position);
+				opts.title(event.getTitle());
+				opts.snippet(event.getDateStart().toLocaleString());
+				
+				// display a green marker for the current user
+				if(event.getUser().getId() == userId)
+					opts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+				// display a violet marker for the others users
+				else
+					opts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+				
+				// add the marker to the Google Maps
+				Marker marker = googleMap.addMarker(opts);
+				markers.put(marker, event);
+			}
+		}
+	}
 
 	@Override
 	public void onInfoWindowClick(Marker marker) {
-		Toast.makeText(this, marker.getTitle() + "\n" + marker.getSnippet(), Toast.LENGTH_SHORT).show();
-
+		Event event = markers.get(marker);
+		Intent intent = new Intent(MainMapActivity.this, EventInformationsActivity.class);
+		Bundle bundle = new Bundle();
+		bundle.putSerializable("event", event);
+		intent.putExtras(bundle);
+		startActivity(intent);
 	}
 }

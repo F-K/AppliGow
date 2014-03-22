@@ -1,6 +1,7 @@
 package model.user;
 
 import model.Service;
+import model.library.Hash;
 
 
 public abstract class SignUserService extends Service implements Runnable {
@@ -10,7 +11,7 @@ public abstract class SignUserService extends Service implements Runnable {
 	public SignUserService(String login, String password, String serverIP, int port) {
 		super(serverIP, port);
 		LOGIN = login;
-		PASSWORD = password;
+		PASSWORD = Hash.sha1(password);
 	}
 	
 	public String getLogin() {

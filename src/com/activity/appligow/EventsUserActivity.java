@@ -7,13 +7,17 @@ import model.event.EventManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import controller.event.TowardMainMap;
 import controller.library.FrontController;
 
 public class EventsUserActivity extends Activity {
@@ -24,8 +28,22 @@ public class EventsUserActivity extends Activity {
 		setContentView(R.layout.events_user_activity);
 		
 		// Retrieve user own events
+		EventManager.initAllEvents(getString(R.string.server_ip), Integer.parseInt(getString(R.string.port)));
 		List<Event> events = EventManager.getEvents();
 		
+		// User haven't event
+		if(events.size() == 0) {
+			TextView textView = new TextView(this);
+			textView.setText(R.string.no_event);
+			textView.setGravity(Gravity.CENTER);
+			textView.setTextSize(18);
+			textView.setOnClickListener(new TowardMainMap());
+			LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+			addContentView(textView, params);
+			return;
+		}
+		
+		// User have events
 		ListView viewListEvents = (ListView) findViewById(R.id.listViewEvents);
 		ArrayAdapter<Event> adapter = new ArrayAdapter<Event>(this,
 				android.R.layout.simple_list_item_1, android.R.id.text1, events);
