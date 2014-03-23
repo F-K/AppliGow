@@ -15,49 +15,60 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+/**
+ * The CreateEventActivity is an Activity class which is use by the user to
+ * create a new event.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class CreateEventActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.event_create_activity);
-		
+
 		Intent intent = getIntent();
-		
-		//title
+
+		// title
 		EditText title = (EditText) findViewById(R.id.editTextTitle);
-		
-		//address
+
+		// address
 		TextView address = (TextView) findViewById(R.id.textViewAddress);
 		address.setText(intent.getStringExtra("address"));
 		double latitude = intent.getDoubleExtra("latitude", 0);
 		double longitude = intent.getDoubleExtra("longitude", 0);
-		
-		//category
+
+		// category
 		Spinner category = (Spinner) findViewById(R.id.spinnerCategory);
-		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this, R.array.category_array, android.R.layout.simple_spinner_item);
-		categoryAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter
+				.createFromResource(this, R.array.category_array,
+						android.R.layout.simple_spinner_item);
+		categoryAdapter
+				.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		category.setAdapter(categoryAdapter);
-		
-		//date
+
+		// date
 		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
 		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
-		
-		//time
+
+		// time
 		TimePicker timePickerStart = (TimePicker) findViewById(R.id.timePickerTimeStart);
 		timePickerStart.setIs24HourView(true);
 		TimePicker timePickerEnd = (TimePicker) findViewById(R.id.timePickerTimeEnd);
 		timePickerEnd.setIs24HourView(true);
 
-		//description
+		// description
 		EditText description = (EditText) findViewById(R.id.editTextDescription);
-		
-		//submit
+
+		// submit
 		Button submit = (Button) findViewById(R.id.buttonSubmit);
-		submit.setOnClickListener(new CreateEventListener(title, address.getText().toString(), latitude, longitude,
-				category, description, datePickerStart, datePickerEnd, timePickerStart, timePickerEnd));
-		
-		
+		submit.setOnClickListener(new CreateEventListener(title, address
+				.getText().toString(), latitude, longitude, category,
+				description, datePickerStart, datePickerEnd, timePickerStart,
+				timePickerEnd));
+
 	}
 
 	@Override
@@ -66,24 +77,24 @@ public class CreateEventActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch(item.getItemId()){
-			case R.id.menu_map :
-				FrontController.redirect(this, MainMapActivity.class);
-				return true;
-			case R.id.menu_events :
-				FrontController.redirect(this, EventsUserActivity.class);
-				return true;
-			case R.id.menu_account_informations :
-				FrontController.redirect(this, UserInformationsActivity.class);
-				return true ;
-			case R.id.menu_account_edit :
-				FrontController.redirect(this, UserEditActivity.class);
-				return true ;
-			default :
-				return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case R.id.menu_map:
+			FrontController.redirect(this, MainMapActivity.class);
+			return true;
+		case R.id.menu_events:
+			FrontController.redirect(this, EventsUserActivity.class);
+			return true;
+		case R.id.menu_account_informations:
+			FrontController.redirect(this, UserInformationsActivity.class);
+			return true;
+		case R.id.menu_account_edit:
+			FrontController.redirect(this, UserEditActivity.class);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
 	}
 

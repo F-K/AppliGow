@@ -7,6 +7,12 @@ import controller.library.FrontController;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+/**
+ * Controller for the sign up listener.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class SignInToSignUpListener implements OnClickListener {
 
 	@Override

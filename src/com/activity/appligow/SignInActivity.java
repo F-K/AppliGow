@@ -7,13 +7,19 @@ import android.widget.EditText;
 import controller.user.SignInListener;
 import controller.user.TowardSignUpListener;
 
+/**
+ * The SignInActivity is an Activity class used by the user to sign in.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class SignInActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sign_in_activity);
-		
+
 		EditText login = (EditText) findViewById(R.id.editTextLogin);
 		EditText password = (EditText) findViewById(R.id.editTextPassword);
 		Button signIn = (Button) findViewById(R.id.buttonSignIn);

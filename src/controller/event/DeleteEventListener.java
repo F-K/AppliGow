@@ -11,10 +11,22 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+/**
+ * DeleteEventListener is an on click listener to delete an event.
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ *
+ */
 public class DeleteEventListener implements OnClickListener {
 	
+	/**
+	 * The event object.
+	 */
 	private Event event;
 	
+	/**
+	 * Constructor of the class.
+	 * @param event The event to be deleted.
+	 */
 	public DeleteEventListener(Event event) {
 		this.event = event;
 	}

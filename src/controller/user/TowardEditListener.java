@@ -7,6 +7,12 @@ import com.activity.appligow.UserEditActivity;
 
 import controller.library.FrontController;
 
+/**
+ * Controller class for toward edit.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class TowardEditListener implements OnClickListener {
 
 	@Override

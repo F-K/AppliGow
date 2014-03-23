@@ -14,52 +14,61 @@ import android.widget.TextView;
 import controller.event.DeleteEventListener;
 import controller.library.FrontController;
 
+/**
+ * The EventInformationsActivity is an Activity class that is used to show the
+ * informations of an event.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class EventInformationsActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.event_informations_activity);
-		
-		//retrieve event
+
+		// retrieve event
 		Bundle bundle = getIntent().getExtras();
 		Event event = (Event) bundle.getSerializable("event");
-		
-		//title
+
+		// title
 		TextView title = (TextView) findViewById(R.id.textViewTitle);
 		title.setText(event.getTitle());
-		
-		//address
+
+		// address
 		TextView address = (TextView) findViewById(R.id.textViewAddress);
 		address.setText(event.getAddress());
-		
-		//category
+
+		// category
 		TextView category = (TextView) findViewById(R.id.textViewCategory);
 		category.setText(event.getCategory());
-		
-		//date and hour start
+
+		// date and hour start
 		TextView viewDateStart = (TextView) findViewById(R.id.textViewDateStart);
 		viewDateStart.setText(event.getDateStart().toLocaleString());
-		
-		//date and hour end
+
+		// date and hour end
 		TextView viewDateEnd = (TextView) findViewById(R.id.textViewDateEnd);
 		viewDateEnd.setText(event.getDateEnd().toLocaleString());
-		
-		//description
+
+		// description
 		TextView description = (TextView) findViewById(R.id.textViewDescription);
 		description.setText(event.getDescription());
-		
-		//button
+
+		// button
 		Button btnEdit = (Button) findViewById(R.id.buttonEdit);
 		Button btnDelete = (Button) findViewById(R.id.buttonDelete);
-		if(UserManager.getUser().getId().intValue() == event.getUser().getId().intValue()) {
+		if (UserManager.getUser().getId().intValue() == event.getUser().getId()
+				.intValue()) {
 			btnEdit.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					Bundle bundle = getIntent().getExtras();
 					Event event = (Event) bundle.getSerializable("event");
-					
-					Intent intent = new Intent(EventInformationsActivity.this, EventEditActivity.class);
+
+					Intent intent = new Intent(EventInformationsActivity.this,
+							EventEditActivity.class);
 					bundle = new Bundle();
 					bundle.putSerializable("event", event);
 					intent.putExtras(bundle);
@@ -82,22 +91,22 @@ public class EventInformationsActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch(item.getItemId()){
-			case R.id.menu_map :
-				FrontController.redirect(this, MainMapActivity.class);
-				return true;
-			case R.id.menu_events :
-				FrontController.redirect(this, EventsUserActivity.class);
-				return true;
-			case R.id.menu_account_informations :
-				FrontController.redirect(this, UserInformationsActivity.class);
-				return true ;
-			case R.id.menu_account_edit :
-				FrontController.redirect(this, UserEditActivity.class);
-				return true ;
-			default :
-				return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case R.id.menu_map:
+			FrontController.redirect(this, MainMapActivity.class);
+			return true;
+		case R.id.menu_events:
+			FrontController.redirect(this, EventsUserActivity.class);
+			return true;
+		case R.id.menu_account_informations:
+			FrontController.redirect(this, UserInformationsActivity.class);
+			return true;
+		case R.id.menu_account_edit:
+			FrontController.redirect(this, UserEditActivity.class);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
 	}
-	
+
 }

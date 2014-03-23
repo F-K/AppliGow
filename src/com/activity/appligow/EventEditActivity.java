@@ -15,52 +15,62 @@ import android.widget.TimePicker;
 import controller.event.EditEventListener;
 import controller.library.FrontController;
 
+/**
+ * The EventEditActivity is an Activity class used to modify the informations of
+ * an event.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class EventEditActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.event_edit_activity);
-		
-		//retrieve event
+
+		// retrieve event
 		Bundle bundle = getIntent().getExtras();
 		Event event = (Event) bundle.getSerializable("event");
-		
-		//title
+
+		// title
 		EditText title = (EditText) findViewById(R.id.editTextTitle);
 		title.setText(event.getTitle());
-		
-		//address
+
+		// address
 		TextView address = (TextView) findViewById(R.id.textViewAddress);
 		address.setText(event.getAddress());
-		
-		//category
+
+		// category
 		Spinner category = (Spinner) findViewById(R.id.spinnerCategory);
-		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this, R.array.category_array, android.R.layout.simple_spinner_item);
-		categoryAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+		ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter
+				.createFromResource(this, R.array.category_array,
+						android.R.layout.simple_spinner_item);
+		categoryAdapter
+				.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		category.setAdapter(categoryAdapter);
 		category.setSelection(categoryAdapter.getPosition(event.getCategory()));
-		
-		//date
+
+		// date
 		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
 		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
-		
-		//time
+
+		// time
 		TimePicker timePickerStart = (TimePicker) findViewById(R.id.timePickerTimeStart);
 		timePickerStart.setIs24HourView(true);
 		TimePicker timePickerEnd = (TimePicker) findViewById(R.id.timePickerTimeEnd);
 		timePickerEnd.setIs24HourView(true);
 
-		//description
+		// description
 		EditText description = (EditText) findViewById(R.id.editTextDescription);
 		description.setText(event.getDescription());
-		
-		//button edit
+
+		// button edit
 		Button submit = (Button) findViewById(R.id.buttonEdit);
-		submit.setOnClickListener(new EditEventListener(event, title, category, description,
-				datePickerStart, datePickerEnd, timePickerStart, timePickerEnd));
-		
-		
+		submit.setOnClickListener(new EditEventListener(event, title, category,
+				description, datePickerStart, datePickerEnd, timePickerStart,
+				timePickerEnd));
+
 	}
 
 	@Override
@@ -69,24 +79,24 @@ public class EventEditActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch(item.getItemId()){
-			case R.id.menu_map :
-				FrontController.redirect(this, MainMapActivity.class);
-				return true;
-			case R.id.menu_events :
-				FrontController.redirect(this, EventsUserActivity.class);
-				return true;
-			case R.id.menu_account_informations :
-				FrontController.redirect(this, UserInformationsActivity.class);
-				return true ;
-			case R.id.menu_account_edit :
-				FrontController.redirect(this, UserEditActivity.class);
-				return true ;
-			default :
-				return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case R.id.menu_map:
+			FrontController.redirect(this, MainMapActivity.class);
+			return true;
+		case R.id.menu_events:
+			FrontController.redirect(this, EventsUserActivity.class);
+			return true;
+		case R.id.menu_account_informations:
+			FrontController.redirect(this, UserInformationsActivity.class);
+			return true;
+		case R.id.menu_account_edit:
+			FrontController.redirect(this, UserEditActivity.class);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
 	}
 

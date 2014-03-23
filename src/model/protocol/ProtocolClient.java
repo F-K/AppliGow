@@ -7,10 +7,25 @@ import library.ITransport;
 import model.event.Event;
 import model.user.User;
 
+/**
+ * The client protocol class.
+ * 
+ * @author Tiago DOS SANTOS, François KIM, Philippe PUONG, Axel SAINTILLAN
+ * 
+ */
 public class ProtocolClient implements IProtocolClient {
-	
+
+	/**
+	 * The implemented transport interface.
+	 */
 	private ITransport transport;
 
+	/**
+	 * Constructor of the class.
+	 * 
+	 * @param transport
+	 *            The transport class.
+	 */
 	public ProtocolClient(ITransport transport) {
 		this.transport = transport;
 	}
@@ -19,12 +34,12 @@ public class ProtocolClient implements IProtocolClient {
 	public void sendService(String service) throws IOException {
 		transport.send(service);
 	}
-	
+
 	@Override
 	public void sendLogin(String login) throws IOException {
 		transport.send(login);
 	}
-	
+
 	@Override
 	public void sendPassword(String password) throws IOException {
 		transport.send(password);
@@ -51,7 +66,8 @@ public class ProtocolClient implements IProtocolClient {
 	}
 
 	@Override
-	public List<Event> getAllEvents() throws ClassNotFoundException, IOException {
+	public List<Event> getAllEvents() throws ClassNotFoundException,
+			IOException {
 		return (List<Event>) transport.receive();
 	}
 
