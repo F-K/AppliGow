@@ -3,7 +3,7 @@
     
     <!-- AppliGow -->
     <string name="action_settings">Paramètres</string>
-    <string name="loading">chargement...</string>
+    <string name="loading">Chargement&#8230;</string>
     
     <!-- User -->
     <string name="first_name">Prénom</string>
@@ -19,8 +19,8 @@
     <string name="delete">Supprimer</string>
     
     <!-- Error -->
-    <string name="error_server">Erreur serveur...</string>
-    <string name="error_sync">Erreur de synchronisation...</string>
+    <string name="error_server">Erreur serveur&#8230;</string>
+    <string name="error_sync">Erreur de synchronisation&#8230;</string>
     <string name="error_missing_fields">Tou les champs sont obligatoires</string>
     <string name="error_login_unavailable">Login indisponible</string>
     <string name="error_sign_in">Login ou mot de passe incorrect</string>
@@ -39,6 +39,7 @@
     
     <!-- Event -->
     <string name="title">Titre</string>
+    <string name="title_edit"></string>
     <string name="address">Adresse</string>
     <string name="category">Categorie</string>
     <string name="dateStart">Date début</string>
@@ -46,6 +47,7 @@
     <string name="timeStart">Heure début</string>
     <string name="timeEnd">Heure fin</string>
     <string name="description">Description</string>
+    <string name="description_edit">Dites en plus&#8230;</string>
     <string name="submit">Valider</string>
     <string-array name="category_array">
         <item>Fête</item>
