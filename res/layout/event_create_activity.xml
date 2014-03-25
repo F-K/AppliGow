@@ -23,13 +23,15 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/title" />
+	                android:text="@string/title"
+	        		style="@style/custome_text_view" />
 	            
 	            <EditText
 			        android:id="@+id/editTextTitle"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
-			        android:ems="10" >
+			        android:ems="10"
+			        style="@style/custom_edit_text" >
 			
 			        <requestFocus />
 			    </EditText>
@@ -44,7 +46,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/address" />
+	                android:text="@string/address"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewAddress"
@@ -61,7 +64,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/category" />
+	                android:text="@string/category"
+	        		style="@style/custome_text_view" />
 	            
 	            <Spinner
 			        android:id="@+id/spinnerCategory"
@@ -78,7 +82,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dateStart" />
+	                android:text="@string/dateStart"
+	        		style="@style/custome_text_view" />
 	
 	        </TableRow>
 		
@@ -103,7 +108,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dateEnd" />
+	                android:text="@string/dateEnd"
+	        		style="@style/custome_text_view" />
 	
 	        </TableRow>
 		
@@ -128,7 +134,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/timeStart" />
+	                android:text="@string/timeStart"
+	        		style="@style/custome_text_view" />
 	
 	        </TableRow>
 		
@@ -152,7 +159,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/timeEnd" />
+	                android:text="@string/timeEnd"
+	        		style="@style/custome_text_view" />
 	
 	        </TableRow>
 		
@@ -178,12 +186,14 @@
 	                android:id="@+id/textViewLabelDescription"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/description" />
+	                android:text="@string/description"
+	        		style="@style/custome_text_view" />
 	            
 	            <EditText
 			        android:id="@+id/editTextDescription"
 			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content" />
+			        android:layout_height="wrap_content"
+			        style="@style/custom_edit_text" />
 	
 			</TableRow>
 		</TableLayout>
@@ -199,7 +209,8 @@
 	            android:layout_height="wrap_content"
 	            android:height="30dp"
 	            android:layout_margin="30dp"
-	            android:text="@string/submit" />
+	            android:text="@string/submit"
+	        	style="@style/green_button" />
 	
 	    </LinearLayout>
 	

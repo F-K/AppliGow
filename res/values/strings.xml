@@ -10,7 +10,7 @@
     <!-- Configuration -->
     <string name="port">1234</string>
 <!--     <string name="server_ip">192.168.1.177</string> -->
-    <string name="server_ip">192.168.0.10</string>
+    <string name="server_ip">192.168.0.12</string>
 
     <!-- User -->
     <string name="first_name">First name</string>

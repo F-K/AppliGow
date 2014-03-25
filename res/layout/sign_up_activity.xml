@@ -16,7 +16,8 @@
 	        android:layout_alignParentTop="true"
 	        android:layout_centerHorizontal="true"
 	        android:layout_marginTop="41dp"
-	        android:text="@string/login" />
+	        android:text="@string/login"
+	        style="@style/custome_text_view" />
 	
 	    <EditText
 	        android:id="@+id/editTextLogin"
@@ -25,7 +26,9 @@
 	        android:layout_below="@+id/textViewLogin"
 	        android:layout_centerHorizontal="true"
 	        android:ems="10"
-	        android:inputType="textPersonName" >
+	        android:inputType="textPersonName"
+	        style="@style/custom_edit_text"
+	        android:layout_marginTop="20dp" >
 	
 	        <requestFocus />
 	    </EditText>
@@ -37,7 +40,8 @@
 	        android:layout_below="@+id/editTextLogin"
 	        android:layout_centerHorizontal="true"
 	        android:layout_marginTop="18dp"
-	        android:text="@string/password" />
+	        android:text="@string/password"
+	        style="@style/custome_text_view" />
 	
 	    <EditText
 	        android:id="@+id/editTextPassword"
@@ -46,7 +50,9 @@
 	        android:layout_alignLeft="@+id/editTextLogin"
 	        android:layout_below="@+id/textViewPassword"
 	        android:ems="10"
-	        android:inputType="textPassword" />
+	        android:inputType="textPassword"
+	        style="@style/custom_edit_text"
+	        android:layout_marginTop="20dp" />
 	
 	    <Button
 	        android:id="@+id/buttonSignUp"
@@ -55,8 +61,9 @@
 	        android:layout_below="@+id/editTextPassword"
 	        android:layout_centerHorizontal="true"
 	        android:layout_centerVertical="true"
-	        android:layout_marginTop="25dp"
-	        android:text="@string/sign_up" />
+	        android:layout_marginTop="30dp"
+	        android:text="@string/sign_up"
+	        style="@style/green_button" />
 	
 	</RelativeLayout>
 </ScrollView>

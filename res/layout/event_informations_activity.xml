@@ -23,7 +23,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/title" />
+	                android:text="@string/title"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewTitle"
@@ -40,7 +41,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/address" />
+	                android:text="@string/address"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewAddress"
@@ -57,7 +59,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/category" />
+	                android:text="@string/category"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewCategory"
@@ -74,7 +77,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dateStart" />
+	                android:text="@string/dateStart"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewDateStart"
@@ -91,7 +95,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dateEnd" />
+	                android:text="@string/dateEnd"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewDateEnd"
@@ -108,7 +113,8 @@
 	            <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/description" />
+	                android:text="@string/description"
+	        		style="@style/custome_text_view" />
 	
 	            <TextView
 	                android:id="@+id/textViewDescription"
@@ -129,7 +135,8 @@
 	            android:layout_height="wrap_content"
 	            android:height="30dp"
 	            android:layout_margin="30dp"
-	            android:text="@string/edit" />
+	            android:text="@string/edit"
+	        	style="@style/blue_button" />
 	
 	        <Button
 	            android:id="@+id/buttonDelete"
@@ -137,7 +144,8 @@
 	            android:layout_height="wrap_content"
 	            android:height="30dp"
 	            android:layout_margin="30dp"
-	            android:text="@string/delete" />
+	            android:text="@string/delete"
+	        	style="@style/red_button" />
 	
 	    </LinearLayout>
 	
