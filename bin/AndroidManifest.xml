@@ -47,7 +47,7 @@
         <!-- 2014-02-09 | Clé pour l'utilisatoin de la map -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA2IBHmc03hb_j0d88eYwmvaZud9SH1yac" />
+            android:value="AIzaSyA8YOB20uSdnpqqvwKBNSN6O65DQsb6FA4" />
 
         <activity
             android:name="com.activity.appligow.HomeLoadingActivity"

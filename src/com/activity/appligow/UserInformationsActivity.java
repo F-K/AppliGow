@@ -2,15 +2,15 @@ package com.activity.appligow;
 
 import model.user.User;
 import model.user.UserManager;
-import controller.library.FrontController;
-import controller.user.DeleteUserListener;
-import controller.user.TowardEditListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import controller.library.FrontController;
+import controller.user.DeleteUserListener;
+import controller.user.TowardEditListener;
 
 /**
  * The UserInformationsActivity is an Activity class that displays the user
@@ -59,7 +59,7 @@ public class UserInformationsActivity extends Activity {
 
 		// add a button to delete the account
 		Button btnDelete = (Button) findViewById(R.id.buttonDelete);
-		btnDelete.setOnClickListener(new DeleteUserListener(user));
+		btnDelete.setOnClickListener(new DeleteUserListener());
 	}
 
 	@Override

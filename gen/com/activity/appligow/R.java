@@ -414,6 +414,11 @@ containing a value of this type.
         public static final int dateStart=0x7f06003c;
         public static final int delete=0x7f060028;
         public static final int description=0x7f060040;
+        public static final int dialog_delete=0x7f060048;
+        /**  Dialog 
+ Dialog 
+         */
+        public static final int dialog_title_delete=0x7f060047;
         public static final int edit=0x7f060027;
         public static final int error_address=0x7f060033;
         public static final int error_check_localization=0x7f060032;
@@ -431,7 +436,8 @@ containing a value of this type.
         public static final int event_created=0x7f060043;
         public static final int event_deleted=0x7f060045;
         public static final int event_updated=0x7f060044;
-        /**  User 
+        /**      <string name="server_ip">192.168.0.12</string> 
+ User 
  User 
          */
         public static final int first_name=0x7f060020;
@@ -448,13 +454,12 @@ containing a value of this type.
  Menu 
          */
         public static final int menu_map=0x7f060034;
+        public static final int no=0x7f06004a;
         public static final int no_event=0x7f060046;
         public static final int password=0x7f060024;
         /**  Configuration 
          */
         public static final int port=0x7f06001e;
-        /**      <string name="server_ip">192.168.1.177</string> 
-         */
         public static final int server_ip=0x7f06001f;
         /**  Action 
  Action 
@@ -470,6 +475,7 @@ containing a value of this type.
         public static final int title=0x7f060039;
         public static final int title_required=0x7f060042;
         public static final int undefined=0x7f06002e;
+        public static final int yes=0x7f060049;
     }
     public static final class style {
         /** 

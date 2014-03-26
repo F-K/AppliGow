@@ -50,11 +50,11 @@ public class CreateEventActivity extends Activity {
 		categoryAdapter
 				.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		category.setAdapter(categoryAdapter);
-
+		
 		//define current date
 		final Calendar currentCalendar = Calendar.getInstance();
 		currentCalendar.set(Calendar.MILLISECOND, Calendar.MILLISECOND - 1000);
-		
+
 		// date
 		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
 		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
@@ -68,7 +68,6 @@ public class CreateEventActivity extends Activity {
 		TimePicker timePickerEnd = (TimePicker) findViewById(R.id.timePickerTimeEnd);
 		timePickerEnd.setIs24HourView(true);
 		timePickerEnd.setCurrentHour(currentCalendar.get(Calendar.HOUR_OF_DAY));
-
 
 		// description
 		EditText description = (EditText) findViewById(R.id.editTextDescription);

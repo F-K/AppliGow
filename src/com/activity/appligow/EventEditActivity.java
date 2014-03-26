@@ -1,5 +1,7 @@
 package com.activity.appligow;
 
+import java.util.Calendar;
+
 import model.event.Event;
 import android.app.Activity;
 import android.os.Bundle;
@@ -50,16 +52,24 @@ public class EventEditActivity extends Activity {
 				.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		category.setAdapter(categoryAdapter);
 		category.setSelection(categoryAdapter.getPosition(event.getCategory()));
+		
+		//define current date
+		final Calendar currentCalendar = Calendar.getInstance();
+		currentCalendar.set(Calendar.MILLISECOND, Calendar.MILLISECOND - 1000);
 
 		// date
 		DatePicker datePickerStart = (DatePicker) findViewById(R.id.datePickerDateStart);
 		DatePicker datePickerEnd = (DatePicker) findViewById(R.id.datePickerDateEnd);
+		datePickerStart.setMinDate(currentCalendar.getTimeInMillis());
+		datePickerEnd.setMinDate(currentCalendar.getTimeInMillis());
 
 		// time
 		TimePicker timePickerStart = (TimePicker) findViewById(R.id.timePickerTimeStart);
 		timePickerStart.setIs24HourView(true);
+		timePickerStart.setCurrentHour(currentCalendar.get(Calendar.HOUR_OF_DAY));
 		TimePicker timePickerEnd = (TimePicker) findViewById(R.id.timePickerTimeEnd);
 		timePickerEnd.setIs24HourView(true);
+		timePickerEnd.setCurrentHour(currentCalendar.get(Calendar.HOUR_OF_DAY));
 
 		// description
 		EditText description = (EditText) findViewById(R.id.editTextDescription);

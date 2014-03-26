@@ -169,6 +169,8 @@ int string dateEnd 0x7f06003d
 int string dateStart 0x7f06003c
 int string delete 0x7f060028
 int string description 0x7f060040
+int string dialog_delete 0x7f060048
+int string dialog_title_delete 0x7f060047
 int string edit 0x7f060027
 int string error_address 0x7f060033
 int string error_check_localization 0x7f060032
@@ -194,6 +196,7 @@ int string menu_account_edit 0x7f060038
 int string menu_account_informations 0x7f060037
 int string menu_events 0x7f060035
 int string menu_map 0x7f060034
+int string no 0x7f06004a
 int string no_event 0x7f060046
 int string password 0x7f060024
 int string port 0x7f06001e
@@ -206,6 +209,7 @@ int string timeStart 0x7f06003e
 int string title 0x7f060039
 int string title_required 0x7f060042
 int string undefined 0x7f06002e
+int string yes 0x7f060049
 int style AppBaseTheme 0x7f0a0000
 int style AppTheme 0x7f0a0001
 int style blue_button 0x7f0a0004
