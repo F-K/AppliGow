@@ -230,60 +230,60 @@ containing a value of this type.
         public static final int long_logo=0x7f020022;
         public static final int red_button=0x7f020023;
         public static final int sakidopuprod=0x7f020024;
+        public static final int studio=0x7f020025;
     }
     public static final class id {
-        public static final int action_settings=0x7f050031;
+        public static final int RelativeLayout1=0x7f050020;
+        public static final int action_settings=0x7f050030;
         public static final int buttonDelete=0x7f050016;
         public static final int buttonEdit=0x7f050010;
-        public static final int buttonSignIn=0x7f05001f;
-        public static final int buttonSignUp=0x7f050020;
-        public static final int buttonSubmit=0x7f05000f;
+        public static final int buttonSignIn=0x7f05001d;
+        public static final int buttonSignUp=0x7f05001e;
+        public static final int buttonSubmit=0x7f05000e;
         public static final int datePickerDateEnd=0x7f050009;
         public static final int datePickerDateStart=0x7f050008;
-        public static final int editTextDescription=0x7f05000e;
-        public static final int editTextFirstName=0x7f050023;
-        public static final int editTextLastName=0x7f050026;
-        public static final int editTextLogin=0x7f05001c;
-        public static final int editTextMail=0x7f050029;
-        public static final int editTextPassword=0x7f05001e;
+        public static final int editTextDescription=0x7f05000d;
+        public static final int editTextFirstName=0x7f050022;
+        public static final int editTextLastName=0x7f050024;
+        public static final int editTextLogin=0x7f05001b;
+        public static final int editTextMail=0x7f050026;
+        public static final int editTextPassword=0x7f05001c;
         public static final int editTextTitle=0x7f050005;
         public static final int hybrid=0x7f050004;
         public static final int imageView1=0x7f050018;
         public static final int imageView2=0x7f050019;
         public static final int listViewEvents=0x7f050017;
         public static final int map=0x7f05001a;
-        public static final int menu_account=0x7f050034;
-        public static final int menu_account_edit=0x7f050036;
-        public static final int menu_account_informations=0x7f050035;
-        public static final int menu_events=0x7f050033;
-        public static final int menu_map=0x7f050032;
+        public static final int menu_account=0x7f050033;
+        public static final int menu_account_edit=0x7f050035;
+        public static final int menu_account_informations=0x7f050034;
+        public static final int menu_events=0x7f050032;
+        public static final int menu_map=0x7f050031;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
         public static final int spinnerCategory=0x7f050007;
         public static final int tableRowDescription=0x7f05000c;
         public static final int tableRowFirstName=0x7f050021;
-        public static final int tableRowLastName=0x7f050024;
-        public static final int tableRowLogin=0x7f05002f;
-        public static final int tableRowMail=0x7f050027;
-        public static final int tableRowPassword=0x7f05002a;
+        public static final int tableRowLastName=0x7f050023;
+        public static final int tableRowLogin=0x7f05002e;
+        public static final int tableRowMail=0x7f050025;
+        public static final int tableRowPassword=0x7f050027;
         public static final int terrain=0x7f050003;
         public static final int textViewAddress=0x7f050006;
         public static final int textViewCategory=0x7f050012;
         public static final int textViewDateEnd=0x7f050014;
         public static final int textViewDateStart=0x7f050013;
         public static final int textViewDescription=0x7f050015;
-        public static final int textViewFirstName=0x7f05002c;
-        public static final int textViewLabelDescription=0x7f05000d;
-        public static final int textViewLabelFirstName=0x7f050022;
-        public static final int textViewLabelLastName=0x7f050025;
-        public static final int textViewLabelLogin=0x7f050030;
-        public static final int textViewLabelMail=0x7f050028;
-        public static final int textViewLabelPassword=0x7f05002b;
-        public static final int textViewLastName=0x7f05002d;
-        public static final int textViewLogin=0x7f05001b;
-        public static final int textViewMail=0x7f05002e;
-        public static final int textViewPassword=0x7f05001d;
+        public static final int textViewFirstName=0x7f050029;
+        public static final int textViewLabelDescription=0x7f05000f;
+        public static final int textViewLabelFirstName=0x7f050028;
+        public static final int textViewLabelLastName=0x7f05002a;
+        public static final int textViewLabelLogin=0x7f05002f;
+        public static final int textViewLabelMail=0x7f05002c;
+        public static final int textViewLastName=0x7f05002b;
+        public static final int textViewLogin=0x7f05001f;
+        public static final int textViewMail=0x7f05002d;
         public static final int textViewTitle=0x7f050011;
         public static final int timePickerTimeEnd=0x7f05000b;
         public static final int timePickerTimeStart=0x7f05000a;
@@ -308,10 +308,13 @@ containing a value of this type.
         public static final int main=0x7f0b0001;
     }
     public static final class string {
+        /**      <string name="server_ip">192.168.0.12</string> 
+         */
+        public static final int API_key=0x7f060020;
         /**  AppliGow 
          */
         public static final int action_settings=0x7f06001b;
-        public static final int address=0x7f06003a;
+        public static final int address=0x7f06003b;
         /**  AppliGow 
          */
         public static final int app_name=0x7f06001a;
@@ -338,7 +341,7 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f060014;
-        public static final int category=0x7f06003b;
+        public static final int category=0x7f06003c;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -410,53 +413,52 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int dateEnd=0x7f06003d;
-        public static final int dateStart=0x7f06003c;
-        public static final int delete=0x7f060028;
-        public static final int description=0x7f060040;
-        public static final int dialog_delete=0x7f060048;
+        public static final int dateEnd=0x7f06003e;
+        public static final int dateStart=0x7f06003d;
+        public static final int delete=0x7f060029;
+        public static final int description=0x7f060041;
+        public static final int dialog_delete=0x7f060049;
         /**  Dialog 
  Dialog 
          */
-        public static final int dialog_title_delete=0x7f060047;
-        public static final int edit=0x7f060027;
-        public static final int error_address=0x7f060033;
-        public static final int error_check_localization=0x7f060032;
-        public static final int error_login_unavailable=0x7f06002c;
-        public static final int error_mail=0x7f060031;
-        public static final int error_missing_fields=0x7f06002b;
-        public static final int error_missing_password=0x7f06002f;
-        public static final int error_password=0x7f060030;
+        public static final int dialog_title_delete=0x7f060048;
+        public static final int edit=0x7f060028;
+        public static final int error_address=0x7f060034;
+        public static final int error_check_localization=0x7f060033;
+        public static final int error_login_unavailable=0x7f06002d;
+        public static final int error_mail=0x7f060032;
+        public static final int error_missing_fields=0x7f06002c;
+        public static final int error_missing_password=0x7f060030;
+        public static final int error_password=0x7f060031;
         /**  Error 
  Error 
          */
-        public static final int error_server=0x7f060029;
-        public static final int error_sign_in=0x7f06002d;
-        public static final int error_sync=0x7f06002a;
-        public static final int event_created=0x7f060043;
-        public static final int event_deleted=0x7f060045;
-        public static final int event_updated=0x7f060044;
-        /**      <string name="server_ip">192.168.0.12</string> 
- User 
+        public static final int error_server=0x7f06002a;
+        public static final int error_sign_in=0x7f06002e;
+        public static final int error_sync=0x7f06002b;
+        public static final int event_created=0x7f060044;
+        public static final int event_deleted=0x7f060046;
+        public static final int event_updated=0x7f060045;
+        /**  User 
  User 
          */
-        public static final int first_name=0x7f060020;
+        public static final int first_name=0x7f060021;
         public static final int home_loading_time=0x7f06001c;
-        public static final int last_name=0x7f060021;
+        public static final int last_name=0x7f060022;
         public static final int loading=0x7f06001d;
-        public static final int login=0x7f060023;
-        public static final int mail=0x7f060022;
-        public static final int menu_account=0x7f060036;
-        public static final int menu_account_edit=0x7f060038;
-        public static final int menu_account_informations=0x7f060037;
-        public static final int menu_events=0x7f060035;
+        public static final int login=0x7f060024;
+        public static final int mail=0x7f060023;
+        public static final int menu_account=0x7f060037;
+        public static final int menu_account_edit=0x7f060039;
+        public static final int menu_account_informations=0x7f060038;
+        public static final int menu_events=0x7f060036;
         /**  Menu 
  Menu 
          */
-        public static final int menu_map=0x7f060034;
-        public static final int no=0x7f06004a;
-        public static final int no_event=0x7f060046;
-        public static final int password=0x7f060024;
+        public static final int menu_map=0x7f060035;
+        public static final int no=0x7f06004b;
+        public static final int no_event=0x7f060047;
+        public static final int password=0x7f060025;
         /**  Configuration 
          */
         public static final int port=0x7f06001e;
@@ -464,18 +466,18 @@ containing a value of this type.
         /**  Action 
  Action 
          */
-        public static final int sign_in=0x7f060025;
-        public static final int sign_up=0x7f060026;
-        public static final int submit=0x7f060041;
-        public static final int timeEnd=0x7f06003f;
-        public static final int timeStart=0x7f06003e;
+        public static final int sign_in=0x7f060026;
+        public static final int sign_up=0x7f060027;
+        public static final int submit=0x7f060042;
+        public static final int timeEnd=0x7f060040;
+        public static final int timeStart=0x7f06003f;
         /**  Event 
  Event 
          */
-        public static final int title=0x7f060039;
-        public static final int title_required=0x7f060042;
-        public static final int undefined=0x7f06002e;
-        public static final int yes=0x7f060049;
+        public static final int title=0x7f06003a;
+        public static final int title_required=0x7f060043;
+        public static final int undefined=0x7f06002f;
+        public static final int yes=0x7f06004a;
     }
     public static final class style {
         /** 

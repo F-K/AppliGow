@@ -20,6 +20,7 @@
         android:layout_above="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="46dp"
-        android:src="@drawable/studio" android:contentDescription="Delta_Kappa_Pi_Sigma"/>
+        android:contentDescription="Delta_Kappa_Pi_Sigma"
+        android:src="@drawable/sakidopuprod" />
 
 </RelativeLayout>

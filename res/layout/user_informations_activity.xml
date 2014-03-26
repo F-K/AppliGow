@@ -6,10 +6,12 @@
     android:layout_height="fill_parent" >
     
 	<LinearLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical"
-	        android:gravity="center" >
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="30dp"
+	    android:layout_marginRight="30dp"
+	    android:gravity="center"
+	    android:orientation="vertical" >
 	
 	    <TableLayout
 	        android:layout_width="fill_parent"
@@ -19,15 +21,15 @@
 	            android:id="@+id/tableRowFirstName"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:gravity="center"
-	            android:layout_margin="20dp" >
-	
+	            android:layout_marginTop="10dp"
+	            android:gravity="center|left" >
+
 	            <TextView
 	                android:id="@+id/textViewLabelFirstName"
+	                style="@style/custome_text_view"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="@string/first_name"
-	        		style="@style/custome_text_view" />
+	                android:text="@string/first_name" />
 	
 	            <TextView
 	                android:id="@+id/textViewFirstName"
@@ -42,9 +44,8 @@
 	            android:id="@+id/tableRowLastName"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:gravity="center"
-	            android:layout_margin="20dp" >
-	
+	            android:layout_marginTop="10dp"
+	            android:gravity="center|left" >
 	            <TextView
 	                android:id="@+id/textViewLabelLastName"
 	                android:layout_width="wrap_content"
@@ -65,8 +66,8 @@
 	            android:id="@+id/tableRowMail"
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
-	            android:gravity="center"
-	            android:layout_margin="20dp" >
+	            android:layout_marginTop="10dp"
+	            android:gravity="center|left" >
 	
 	            <TextView
 	                android:id="@+id/textViewLabelMail"
@@ -88,8 +89,9 @@
 	            android:id="@+id/tableRowLogin"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:gravity="center"
-	            android:layout_margin="20dp" >
+	            android:layout_marginTop="10dp"
+	            android:gravity="center|left" >
+
 	
 	            <TextView
 	                android:id="@+id/textViewLabelLogin"
@@ -109,27 +111,31 @@
 		</TableLayout>
 		
 	    <LinearLayout
-	        android:layout_width="wrap_content"
+	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:gravity="center" >
+	        android:layout_marginTop="10dp"
+	        android:gravity="center"
+	        android:orientation="vertical" >
 	
 	        <Button
 	            android:id="@+id/buttonEdit"
-	            android:layout_width="wrap_content"
+	            style="@style/blue_button"
+	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
+	            android:layout_marginTop="15dp"
 	            android:height="30dp"
-	            android:layout_margin="30dp"
-	            android:text="@string/edit"
-	        	style="@style/blue_button" />
+	            android:text="@string/edit" />
+
 		
 	        <Button
 	            android:id="@+id/buttonDelete"
-	            android:layout_width="wrap_content"
+	            style="@style/red_button"
+	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/buttonEdit"
+	            android:layout_marginTop="10dp"
 	            android:height="30dp"
-	            android:layout_margin="30dp"
-	            android:text="@string/delete"
-	        	style="@style/red_button" />
+	            android:text="@string/delete" />
 	
 	    </LinearLayout>
 	

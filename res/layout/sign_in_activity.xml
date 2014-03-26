@@ -6,75 +6,74 @@
     android:layout_height="match_parent" >
     
 	<RelativeLayout
-	    android:layout_width="wrap_content"
+	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-		android:layout_gravity="center_horizontal" >
-	
-	    <TextView
-	        android:id="@+id/textViewLogin"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentTop="true"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="41dp"
-	        android:text="@string/login"
-	        style="@style/custome_text_view" />
+	    android:layout_gravity="center_horizontal"
+	    android:layout_marginLeft="30dp"
+	    android:layout_marginRight="30dp" >
+
+		<ImageView
+		    android:id="@+id/imageView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginTop="20dp"
+		    android:contentDescription="@string/app_name"
+		    android:src="@drawable/long_logo" />
 	
 	    <EditText
 	        android:id="@+id/editTextLogin"
-	        android:layout_width="wrap_content"
+	        style="@style/custom_edit_text"
+	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/textViewLogin"
 	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="120dp"
 	        android:ems="10"
-	        android:inputType="textPersonName"
-	        android:layout_marginTop="20dp"
-	        style="@style/custom_edit_text" >
-	
+
+	        android:hint="@string/login"
+	        android:inputType="textPersonName" >
+
 	        <requestFocus />
 	    </EditText>
-	
-	    <TextView
-	        android:id="@+id/textViewPassword"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/editTextLogin"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="18dp"
-	        android:text="@string/password"
-	        style="@style/custome_text_view" />
-	
+
 	    <EditText
 	        android:id="@+id/editTextPassword"
+	        style="@style/custom_edit_text"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/editTextLogin"
-	        android:layout_below="@+id/textViewPassword"
+	        android:layout_alignParentEnd="false"
+	        android:layout_alignRight="@+id/editTextLogin"
+	        android:layout_below="@+id/editTextLogin"
+	        android:layout_marginTop="15dp"
 	        android:ems="10"
-	        android:inputType="textPassword"
-	        android:layout_marginTop="20dp"
-	        style="@style/custom_edit_text" />
-	
+	        android:hint="@string/password"
+	        android:inputType="textPassword" />
+
 	    <Button
 	        android:id="@+id/buttonSignIn"
+	        style="@style/green_button"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/editTextPassword"
+	        android:layout_alignRight="@+id/editTextPassword"
 	        android:layout_below="@+id/editTextPassword"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="30dp"
-	        android:text="@string/sign_in"
-	        style="@style/green_button" />
+
+	        android:layout_marginTop="15dp"
+	        android:text="@string/sign_in" />
+
 	
 	    <Button
 	        android:id="@+id/buttonSignUp"
+	        style="@style/blue_button"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/buttonSignIn"
+	        android:layout_alignRight="@+id/buttonSignIn"
 	        android:layout_below="@+id/buttonSignIn"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="42dp"
-	        android:text="@string/sign_up"
-	        style="@style/blue_button" />
-	    
-	
+
+	        android:layout_marginTop="10dp"
+	        android:text="@string/sign_up" />
+
 	</RelativeLayout>
 </ScrollView>

@@ -9,8 +9,7 @@
 
     <!-- Configuration -->
     <string name="port">1234</string>
-    <string name="server_ip">192.168.43.219</string>
-<!--     <string name="server_ip">192.168.0.12</string> -->
+    <string name="server_ip">192.168.1.21</string>
 	<string name="API_key">AIzaSyDUIgfsEMze8RgZJ9qVlEM407kz1SejXvI</string>
 
     <!-- User -->
