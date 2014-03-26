@@ -3,7 +3,7 @@
     
     <!-- AppliGow -->
     <string name="action_settings">Paramètres</string>
-    <string name="loading">chargement...</string>
+    <string name="loading">Chargement&#8230;</string>
     
     <!-- User -->
     <string name="first_name">Prénom</string>
@@ -19,8 +19,8 @@
     <string name="delete">Supprimer</string>
     
     <!-- Error -->
-    <string name="error_server">Erreur serveur...</string>
-    <string name="error_sync">Erreur de synchronisation...</string>
+    <string name="error_server">Erreur serveur&#8230;</string>
+    <string name="error_sync">Erreur de synchronisation&#8230;</string>
     <string name="error_missing_fields">Tou les champs sont obligatoires</string>
     <string name="error_login_unavailable">Login indisponible</string>
     <string name="error_sign_in">Login ou mot de passe incorrect</string>
@@ -28,7 +28,8 @@
     <string name="error_missing_password">Mot de passe obligatoire</string>
     <string name="error_password">Mot de passe incorrect</string>
     <string name="error_mail">Mail incorrect</string>
-    <string name="error_check_localization">Veuillez cocher le service de localisation</string>
+    <string name="error_check_localization">Veuillez activer le service de localisation</string>
+    <string name="error_address">Adresse introuvable</string>
     
 	<!-- Menu -->
 	<string name="menu_map">Carte</string>
