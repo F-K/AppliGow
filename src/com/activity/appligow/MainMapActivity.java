@@ -25,6 +25,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -199,7 +200,11 @@ public class MainMapActivity extends FragmentActivity implements
 				intent.putExtra("address", address);
 				intent.putExtra("latitude", point.latitude);
 				intent.putExtra("longitude", point.longitude);
-
+				
+				Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+				// Vibrate for 100 milliseconds
+				v.vibrate(100);
+				
 				startActivity(intent);
 
 			}

@@ -9,7 +9,7 @@
 
     <!-- Configuration -->
     <string name="port">1234</string>
-    <string name="server_ip">192.168.1.21</string>
+    <string name="server_ip">192.168.1.100</string>
 	<string name="API_key">AIzaSyDUIgfsEMze8RgZJ9qVlEM407kz1SejXvI</string>
 
     <!-- User -->
@@ -69,6 +69,7 @@
     <string name="event_updated">Your event is updated</string>
     <string name="event_deleted">Your event is deleted</string>
     <string name="no_event">You have not events !\n\nTouch HERE or press Map tab\nto add an event to your events list !</string>
+    <string name="creator">Creator</string>
     
     <!-- Dialog -->
     <string name="dialog_title_delete">Delete ?</string>

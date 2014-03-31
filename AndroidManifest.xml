@@ -18,6 +18,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <!-- 2014-02-09 | Ajout de permissions pour l'utilisation de google maps API -->
     <uses-permission android:name="com.activity.appligow.permission.MAPS_RECEIVE" />

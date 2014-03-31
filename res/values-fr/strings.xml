@@ -62,7 +62,7 @@
     <string name="event_updated">Votre événement a été mis à jour</string>
     <string name="event_deleted">Votre événement a été supprimé</string>
     <string name="no_event">Vous n\'avez pas d\'événements !\n\nToucher ICI ou presser l\'onget CARTE\npour ajouter un événement à votre liste d\'événements !</string>
-    
+    <string name="creator">Créateur</string>
     <!-- Dialog -->
     <string name="dialog_title_delete">Supprimer ?</string>
     <string name="dialog_delete">Etes-vous sûr ?</string>

@@ -1,5 +1,7 @@
 package com.activity.appligow;
 
+import com.google.android.gms.internal.fn;
+
 import model.event.Event;
 import model.user.UserManager;
 import android.app.Activity;
@@ -31,6 +33,10 @@ public class EventInformationsActivity extends Activity {
 		// retrieve event
 		Bundle bundle = getIntent().getExtras();
 		Event event = (Event) bundle.getSerializable("event");
+		
+		// creator
+		TextView creator = (TextView) findViewById(R.id.textViewCreator);
+		creator.setText(event.getUser().getLogin());
 
 		// title
 		TextView title = (TextView) findViewById(R.id.textViewTitle);
